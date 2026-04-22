@@ -111,16 +111,6 @@ results/
 └── divergence_9b_base_vs_9b_ft.json      # Token-level analysis
 ```
 
-## Estimated Execution Time (DGX Spark)
-
-| Model | Train | Merge | Eval | Total |
-|---|---|---|---|---|
-| 9B | ~30 min | ~15 min | ~30 min | ~75 min |
-| 4B | ~20 min | ~10 min | ~20 min | ~50 min |
-| 2B | ~15 min | ~8 min | ~15 min | ~38 min |
-| 0.8B | ~8 min | ~5 min | ~10 min | ~23 min |
-| **Full pipeline** | | | | **~3-4 hours** |
-
 ## GGUF Conversion and Deployment
 
 After training and merging, convert your models to GGUF format for local deployment with Ollama or llama.cpp. The conversion kit is in [`gguf/`](gguf/):
