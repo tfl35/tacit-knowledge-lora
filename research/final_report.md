@@ -1,7 +1,6 @@
-# Encoding Talent Intelligence Expertise into Open-Weight Language Models
+# Encoding Tacit Knowledge via LoRA
 
-## A Cross-Scale Knowledge Fidelity Analysis
-
+## A Cross-Scale Study of Talent Intelligence Domain Knowledge Transfer in Fine-Tuned LLMs
 ---
 
 ## Introduction
