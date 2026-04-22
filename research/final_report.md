@@ -1,6 +1,6 @@
-# Encoding Tacit Knowledge via LoRA
+# Encoding Tacit Knowledge into Open-Weight Language Models via LoRA
 
-## A Cross-Scale Study of Talent Intelligence Domain Knowledge Transfer in Fine-Tuned LLMs
+## A Cross-Scale Knowledge Fidelity Analysis
 ---
 
 ## Introduction
