@@ -1,0 +1,19 @@
+# Core training and inference
+torch>=2.1.0
+transformers>=4.40.0
+peft>=0.10.0
+trl>=0.8.0
+datasets>=2.18.0
+
+# Qwen3.5 hybrid attention kernels (required for training)
+# These are specific to the Qwen3.5 Gated DeltaNet architecture.
+# If you hit CUDA errors, check version compatibility with your torch version.
+flash-linear-attention
+causal-conv1d
+
+# LLM-as-judge evaluation (pipeline/scripts/judge.py)
+requests
+
+# Domain-agnostic toolkit (tools/)
+pyyaml
+anthropic

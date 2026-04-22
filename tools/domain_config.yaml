@@ -1,0 +1,191 @@
+# =============================================================
+# Domain Configuration Template
+# =============================================================
+# This file defines everything domain-specific about your
+# adapter evaluation. Fill it in for your domain, then run:
+#
+#   python dataset_audit.py --config domain_config.yaml --dataset your_data.json
+#   python eval_runner.py --config domain_config.yaml --model /path/to/model
+#
+# The talent intelligence version of this config had 7 subcategories,
+# 12 behavioral categories, and 45 evaluation questions. Start smaller.
+# 3-5 subcategories and 15-20 questions is enough for a first pass.
+# =============================================================
+
+# --- DOMAIN IDENTITY ---
+domain:
+  name: "Acupuncture Clinical Reasoning"         # Your domain
+  description: >
+    Clinical reasoning for acupuncture and traditional Chinese medicine,
+    including pattern differentiation, point selection rationale,
+    treatment planning, and patient communication.
+  maturity_framework: "WHO Traditional Medicine Strategy benchmarks"  # Optional: external framework you're calibrating against
+
+# --- SYSTEM PROMPT ---
+# Must match the system prompt used in your training data exactly.
+# One prompt. No variations. This is a validated empirical finding.
+system_prompt: >
+  You are an experienced acupuncture clinician specializing in
+  traditional Chinese medicine pattern differentiation and treatment
+  planning. You reason through clinical presentations by evaluating
+  signs and symptoms critically, considering multiple pattern
+  possibilities, and recommending treatment strategies grounded in
+  classical theory and clinical evidence. You ask clarifying questions
+  about the patient presentation before committing to a pattern
+  diagnosis. When clinical evidence is ambiguous, you say so. Your
+  goal is to help practitioners think more rigorously about their
+  clinical reasoning, not to replace their judgment.
+
+# --- KNOWLEDGE SUBCATEGORIES ---
+# These are the domains of expertise your adapter should encode.
+# Map them to an established framework in your field if one exists.
+# Each will become a row in your knowledge fidelity matrix.
+subcategories:
+  A:
+    name: "Pattern Differentiation"
+    description: "Identifying TCM patterns from symptoms, pulse, tongue"
+  B:
+    name: "Point Selection Rationale"
+    description: "Why specific acupuncture points for specific presentations"
+  C:
+    name: "Treatment Planning"
+    description: "Sequencing treatments, setting expectations, adjusting protocols"
+  D:
+    name: "Contraindications & Safety"
+    description: "When not to treat, red flags, scope of practice boundaries"
+  E:
+    name: "Patient Communication"
+    description: "Explaining TCM concepts to patients in accessible language"
+
+# --- BEHAVIORAL CATEGORIES ---
+# These are the analytical behaviors you expect the fine-tuned model
+# to demonstrate. They cross-cut the knowledge subcategories.
+behavioral_categories:
+  - id: 1
+    name: "Diagnostic Questioning"
+    description: "Asks clarifying questions before committing to a diagnosis"
+  - id: 2
+    name: "Pattern Complexity"
+    description: "Recognizes when multiple patterns overlap or contradict"
+  - id: 3
+    name: "Source Evaluation"
+    description: "Distinguishes classical theory from modern research evidence"
+  - id: 4
+    name: "Epistemic Calibration"
+    description: "Expresses appropriate uncertainty when presentation is ambiguous"
+  - id: 5
+    name: "Premise Challenge"
+    description: "Pushes back when the question contains a flawed assumption"
+  - id: 6
+    name: "Practical Actionability"
+    description: "Gives recommendations a practitioner can act on immediately"
+
+# --- EVALUATION QUESTIONS ---
+# Each question tests a specific subcategory and behavioral category.
+# Signals are domain terms you expect in a good response.
+# Anti-signals are terms that indicate a generic or shallow response.
+#
+# Guidelines from the research:
+#   - Write questions the way a real stakeholder would ask them
+#   - Include ambiguous scenarios that require scoping before answering
+#   - Include at least 2-3 questions designed to trigger diagnostic questioning
+#   - Include at least 1 question with a flawed premise to test premise challenge
+#   - Vary difficulty: some straightforward, some requiring multi-signal synthesis
+#
+# Start with 15-20 questions. Expand after your first evaluation cycle.
+
+eval_questions:
+  - id: "q01"
+    question: >
+      A patient presents with chronic lower back pain, worse in cold
+      weather, with a deep weak pulse and pale tongue. What's your
+      diagnosis and treatment approach?
+    subcategory: "A"
+    behavioral_category: 1
+    signals:
+      - "kidney"
+      - "yang deficiency"
+      - "cold"
+      - "moxa"
+      - "Du Mai"
+      - "BL 23"
+      - "GV 4"
+      - "tonif"
+    anti_signals:
+      - "as an AI"
+      - "I cannot provide medical"
+      - "consult a licensed"
+    what_it_tests: "Basic pattern differentiation — does it identify Kidney Yang Deficiency?"
+
+  - id: "q02"
+    question: >
+      I always use LI 4 and LV 3 (Four Gates) for stress. Is that
+      a good protocol?
+    subcategory: "B"
+    behavioral_category: 5
+    signals:
+      - "depends"
+      - "pattern"
+      - "differentiat"
+      - "what kind of stress"
+      - "liver qi"
+      - "not always"
+      - "underlying"
+    anti_signals:
+      - "great protocol"
+      - "excellent choice"
+      - "Four Gates is perfect"
+    what_it_tests: "Premise challenge — does it question the one-size-fits-all protocol assumption?"
+
+  - id: "q03"
+    question: >
+      My patient has been coming weekly for 6 weeks for migraine with
+      no improvement. What should I do?
+    subcategory: "C"
+    behavioral_category: 4
+    signals:
+      - "reassess"
+      - "pattern"
+      - "re-evaluate"
+      - "refer"
+      - "red flag"
+      - "differential"
+      - "frequency"
+      - "not responding"
+    anti_signals:
+      - "continue treatment"
+      - "be patient"
+      - "it takes time"
+    what_it_tests: "Does it flag treatment failure and recommend reassessment rather than persistence?"
+
+  # --- ADD MORE QUESTIONS HERE ---
+  # Aim for 15-20 questions covering all subcategories.
+  # At least 2-3 should be deliberately ambiguous to test diagnostic questioning.
+  # At least 1-2 should contain flawed premises.
+  # Include 1-2 general knowledge questions to test for catastrophic forgetting.
+
+  - id: "q_general_1"
+    question: "What causes a rainbow?"
+    subcategory: "general"
+    behavioral_category: null
+    signals:
+      - "refract"
+      - "light"
+      - "water"
+      - "prism"
+      - "spectrum"
+    anti_signals: []
+    what_it_tests: "General knowledge preservation — does fine-tuning break non-domain knowledge?"
+
+# --- DATASET AUDIT THRESHOLDS ---
+# These are the structural distribution targets based on empirical findings.
+# The dataset_audit.py script checks your training data against these.
+audit_thresholds:
+  min_examples: 100
+  max_examples: 300
+  target_multi_turn_pct: 0.25       # At least 25% multi-turn
+  max_single_length_cluster_pct: 0.40  # No more than 40% in any 100-word length bucket
+  target_lead_with_insight_pct: 0.20   # At least 20% of responses lead with recommendation
+  target_diagnostic_question_pct: 0.25 # At least 25% demonstrate diagnostic questioning
+  max_response_words: 500           # Flag responses over this length
+  min_response_words: 30            # Flag responses under this length

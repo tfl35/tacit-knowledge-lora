@@ -1,0 +1,411 @@
+{
+  "generated_at": null,
+  "models_evaluated": [
+    "qwen3.5-9b-abl100-ft",
+    "qwen3.5-9b-abl150-ft",
+    "qwen3.5-9b-abl200-ft",
+    "qwen3.5-9b-abl250-ft",
+    "qwen3.5-9b-abl300-ft",
+    "qwen3.5-9b-abl50-ft"
+  ],
+  "knowledge_fidelity_matrix": {
+    "qwen3.5-9b-abl100-ft": {
+      "A": 0.391,
+      "B": 0.24,
+      "C": 0.177,
+      "D": 0.319,
+      "E": 0.338,
+      "F": 0.334,
+      "G": 0.396
+    },
+    "qwen3.5-9b-abl150-ft": {
+      "A": 0.356,
+      "B": 0.207,
+      "C": 0.263,
+      "D": 0.246,
+      "E": 0.272,
+      "F": 0.274,
+      "G": 0.248
+    },
+    "qwen3.5-9b-abl200-ft": {
+      "A": 0.344,
+      "B": 0.15,
+      "C": 0.242,
+      "D": 0.225,
+      "E": 0.245,
+      "F": 0.264,
+      "G": 0.238
+    },
+    "qwen3.5-9b-abl250-ft": {
+      "A": 0.256,
+      "B": 0.263,
+      "C": 0.365,
+      "D": 0.246,
+      "E": 0.223,
+      "F": 0.252,
+      "G": 0.324
+    },
+    "qwen3.5-9b-abl300-ft": {
+      "A": 0.18,
+      "B": 0.25,
+      "C": 0.208,
+      "D": 0.263,
+      "E": 0.22,
+      "F": 0.228,
+      "G": 0.254
+    },
+    "qwen3.5-9b-abl50-ft": {
+      "A": 0.561,
+      "B": 0.253,
+      "C": 0.168,
+      "D": 0.431,
+      "E": 0.305,
+      "F": 0.272,
+      "G": 0.362
+    }
+  },
+  "behavioral_category_matrix": {
+    "qwen3.5-9b-abl100-ft": {
+      "Premise Challenge": 0.46,
+      "Data Source Skepticism": 0.253,
+      "Multi-Signal Synthesis": 0.177,
+      "Live Signal Interpretation": 0.247,
+      "Location Feasibility": 0.463,
+      "Stakeholder Management": 0.303,
+      "Always-On Intelligence": 0.373,
+      "Job Description Analysis": 0.297,
+      "Forward-Looking": 0.143,
+      "Commercial Translation": 0.253,
+      "Diagnostic Questioning": 0.45,
+      "Epistemic Calibration": 0.347,
+      "Brevity": 0.8,
+      "Switching": 0.38,
+      "General Knowledge": 1.0
+    },
+    "qwen3.5-9b-abl150-ft": {
+      "Premise Challenge": 0.167,
+      "Data Source Skepticism": 0.215,
+      "Multi-Signal Synthesis": 0.263,
+      "Live Signal Interpretation": 0.2,
+      "Location Feasibility": 0.603,
+      "Stakeholder Management": 0.303,
+      "Always-On Intelligence": 0.27,
+      "Job Description Analysis": 0.153,
+      "Forward-Looking": 0.047,
+      "Commercial Translation": 0.263,
+      "Diagnostic Questioning": 0.372,
+      "Epistemic Calibration": 0.263,
+      "Brevity": 0.4,
+      "Switching": 0.5,
+      "General Knowledge": 1.0
+    },
+    "qwen3.5-9b-abl200-ft": {
+      "Premise Challenge": 0.25,
+      "Data Source Skepticism": 0.18,
+      "Multi-Signal Synthesis": 0.242,
+      "Live Signal Interpretation": 0.2,
+      "Location Feasibility": 0.407,
+      "Stakeholder Management": 0.393,
+      "Always-On Intelligence": 0.253,
+      "Job Description Analysis": 0.15,
+      "Forward-Looking": 0.143,
+      "Commercial Translation": 0.103,
+      "Diagnostic Questioning": 0.287,
+      "Epistemic Calibration": 0.297,
+      "Brevity": 0.6,
+      "Switching": 0.25,
+      "General Knowledge": 1.0
+    },
+    "qwen3.5-9b-abl250-ft": {
+      "Premise Challenge": 0.29,
+      "Data Source Skepticism": 0.247,
+      "Multi-Signal Synthesis": 0.365,
+      "Live Signal Interpretation": 0.057,
+      "Location Feasibility": 0.407,
+      "Stakeholder Management": 0.317,
+      "Always-On Intelligence": 0.303,
+      "Job Description Analysis": 0.153,
+      "Forward-Looking": 0.143,
+      "Commercial Translation": 0.27,
+      "Diagnostic Questioning": 0.355,
+      "Epistemic Calibration": 0.253,
+      "Brevity": 0.4,
+      "Switching": 0.12,
+      "General Knowledge": 0.5
+    },
+    "qwen3.5-9b-abl300-ft": {
+      "Premise Challenge": 0.21,
+      "Data Source Skepticism": 0.25,
+      "Multi-Signal Synthesis": 0.208,
+      "Live Signal Interpretation": 0.103,
+      "Location Feasibility": 0.407,
+      "Stakeholder Management": 0.167,
+      "Always-On Intelligence": 0.33,
+      "Job Description Analysis": 0.25,
+      "Forward-Looking": 0.047,
+      "Commercial Translation": 0.27,
+      "Diagnostic Questioning": 0.247,
+      "Epistemic Calibration": 0.347,
+      "Brevity": 0.0,
+      "Switching": 0.25,
+      "General Knowledge": 0.835
+    },
+    "qwen3.5-9b-abl50-ft": {
+      "Premise Challenge": 0.54,
+      "Data Source Skepticism": 0.465,
+      "Multi-Signal Synthesis": 0.168,
+      "Live Signal Interpretation": 0.34,
+      "Location Feasibility": 0.5,
+      "Stakeholder Management": 0.357,
+      "Always-On Intelligence": 0.317,
+      "Job Description Analysis": 0.2,
+      "Forward-Looking": 0.097,
+      "Commercial Translation": 0.207,
+      "Diagnostic Questioning": 0.57,
+      "Epistemic Calibration": 0.357,
+      "Brevity": 0.8,
+      "Switching": 0.75,
+      "General Knowledge": 0.875
+    }
+  },
+  "finetuning_deltas": {},
+  "degradation_thresholds": {},
+  "diagnostic_questioning_analysis": {
+    "qwen3.5-9b-abl100-ft": {
+      "num_tests": 4,
+      "asks_questions_count": 4,
+      "asks_questions_rate": 1.0,
+      "avg_signal_score": 0.45,
+      "avg_word_count": 290
+    },
+    "qwen3.5-9b-abl150-ft": {
+      "num_tests": 4,
+      "asks_questions_count": 4,
+      "asks_questions_rate": 1.0,
+      "avg_signal_score": 0.372,
+      "avg_word_count": 318
+    },
+    "qwen3.5-9b-abl200-ft": {
+      "num_tests": 4,
+      "asks_questions_count": 4,
+      "asks_questions_rate": 1.0,
+      "avg_signal_score": 0.287,
+      "avg_word_count": 121
+    },
+    "qwen3.5-9b-abl250-ft": {
+      "num_tests": 4,
+      "asks_questions_count": 4,
+      "asks_questions_rate": 1.0,
+      "avg_signal_score": 0.355,
+      "avg_word_count": 69
+    },
+    "qwen3.5-9b-abl300-ft": {
+      "num_tests": 4,
+      "asks_questions_count": 4,
+      "asks_questions_rate": 1.0,
+      "avg_signal_score": 0.247,
+      "avg_word_count": 66
+    },
+    "qwen3.5-9b-abl50-ft": {
+      "num_tests": 4,
+      "asks_questions_count": 4,
+      "asks_questions_rate": 1.0,
+      "avg_signal_score": 0.57,
+      "avg_word_count": 724
+    }
+  },
+  "per_model_summaries": {
+    "qwen3.5-9b-abl100-ft": {
+      "avg_signal_score": 0.36,
+      "avg_word_count": 606,
+      "total_time_seconds": 3691.5,
+      "think_tag_rate": 0.0,
+      "category_scores": {
+        "Premise Challenge": 0.46,
+        "Data Source Skepticism": 0.25,
+        "Multi-Signal Synthesis": 0.18,
+        "Live Signal Interpretation": 0.25,
+        "Location Feasibility": 0.46,
+        "Stakeholder Management": 0.3,
+        "Always-On Intelligence": 0.37,
+        "Job Description Analysis": 0.3,
+        "Forward-Looking": 0.14,
+        "Commercial Translation": 0.25,
+        "Diagnostic Questioning": 0.45,
+        "Epistemic Calibration": 0.35,
+        "Brevity": 0.8,
+        "Switching": 0.38,
+        "General Knowledge": 1.0
+      },
+      "knowledge_subcategory_scores": {
+        "D": 0.32,
+        "A": 0.39,
+        "E": 0.34,
+        "C": 0.18,
+        "F": 0.33,
+        "G": 0.4,
+        "B": 0.24
+      }
+    },
+    "qwen3.5-9b-abl150-ft": {
+      "avg_signal_score": 0.3,
+      "avg_word_count": 457,
+      "total_time_seconds": 2815.2,
+      "think_tag_rate": 0.0,
+      "category_scores": {
+        "Premise Challenge": 0.17,
+        "Data Source Skepticism": 0.21,
+        "Multi-Signal Synthesis": 0.26,
+        "Live Signal Interpretation": 0.2,
+        "Location Feasibility": 0.6,
+        "Stakeholder Management": 0.3,
+        "Always-On Intelligence": 0.27,
+        "Job Description Analysis": 0.15,
+        "Forward-Looking": 0.05,
+        "Commercial Translation": 0.26,
+        "Diagnostic Questioning": 0.37,
+        "Epistemic Calibration": 0.26,
+        "Brevity": 0.4,
+        "Switching": 0.5,
+        "General Knowledge": 1.0
+      },
+      "knowledge_subcategory_scores": {
+        "D": 0.25,
+        "A": 0.36,
+        "E": 0.27,
+        "C": 0.26,
+        "F": 0.27,
+        "G": 0.25,
+        "B": 0.21
+      }
+    },
+    "qwen3.5-9b-abl200-ft": {
+      "avg_signal_score": 0.29,
+      "avg_word_count": 349,
+      "total_time_seconds": 2123.8,
+      "think_tag_rate": 0.0,
+      "category_scores": {
+        "Premise Challenge": 0.25,
+        "Data Source Skepticism": 0.18,
+        "Multi-Signal Synthesis": 0.24,
+        "Live Signal Interpretation": 0.2,
+        "Location Feasibility": 0.41,
+        "Stakeholder Management": 0.39,
+        "Always-On Intelligence": 0.25,
+        "Job Description Analysis": 0.15,
+        "Forward-Looking": 0.14,
+        "Commercial Translation": 0.1,
+        "Diagnostic Questioning": 0.29,
+        "Epistemic Calibration": 0.3,
+        "Brevity": 0.6,
+        "Switching": 0.25,
+        "General Knowledge": 1.0
+      },
+      "knowledge_subcategory_scores": {
+        "D": 0.22,
+        "A": 0.34,
+        "E": 0.24,
+        "C": 0.24,
+        "F": 0.26,
+        "G": 0.24,
+        "B": 0.15
+      }
+    },
+    "qwen3.5-9b-abl250-ft": {
+      "avg_signal_score": 0.28,
+      "avg_word_count": 291,
+      "total_time_seconds": 1761.1,
+      "think_tag_rate": 0.0,
+      "category_scores": {
+        "Premise Challenge": 0.29,
+        "Data Source Skepticism": 0.25,
+        "Multi-Signal Synthesis": 0.36,
+        "Live Signal Interpretation": 0.06,
+        "Location Feasibility": 0.41,
+        "Stakeholder Management": 0.32,
+        "Always-On Intelligence": 0.3,
+        "Job Description Analysis": 0.15,
+        "Forward-Looking": 0.14,
+        "Commercial Translation": 0.27,
+        "Diagnostic Questioning": 0.35,
+        "Epistemic Calibration": 0.25,
+        "Brevity": 0.4,
+        "Switching": 0.12,
+        "General Knowledge": 0.5
+      },
+      "knowledge_subcategory_scores": {
+        "D": 0.25,
+        "A": 0.26,
+        "E": 0.22,
+        "C": 0.36,
+        "F": 0.25,
+        "G": 0.32,
+        "B": 0.26
+      }
+    },
+    "qwen3.5-9b-abl300-ft": {
+      "avg_signal_score": 0.26,
+      "avg_word_count": 238,
+      "total_time_seconds": 1426.8,
+      "think_tag_rate": 0.0,
+      "category_scores": {
+        "Premise Challenge": 0.21,
+        "Data Source Skepticism": 0.25,
+        "Multi-Signal Synthesis": 0.21,
+        "Live Signal Interpretation": 0.1,
+        "Location Feasibility": 0.41,
+        "Stakeholder Management": 0.17,
+        "Always-On Intelligence": 0.33,
+        "Job Description Analysis": 0.25,
+        "Forward-Looking": 0.05,
+        "Commercial Translation": 0.27,
+        "Diagnostic Questioning": 0.25,
+        "Epistemic Calibration": 0.35,
+        "Brevity": 0.0,
+        "Switching": 0.25,
+        "General Knowledge": 0.83
+      },
+      "knowledge_subcategory_scores": {
+        "D": 0.26,
+        "A": 0.18,
+        "E": 0.22,
+        "C": 0.21,
+        "F": 0.23,
+        "G": 0.25,
+        "B": 0.25
+      }
+    },
+    "qwen3.5-9b-abl50-ft": {
+      "avg_signal_score": 0.39,
+      "avg_word_count": 834,
+      "total_time_seconds": 5151.5,
+      "think_tag_rate": 0.0,
+      "category_scores": {
+        "Premise Challenge": 0.54,
+        "Data Source Skepticism": 0.46,
+        "Multi-Signal Synthesis": 0.17,
+        "Live Signal Interpretation": 0.34,
+        "Location Feasibility": 0.5,
+        "Stakeholder Management": 0.36,
+        "Always-On Intelligence": 0.32,
+        "Job Description Analysis": 0.2,
+        "Forward-Looking": 0.1,
+        "Commercial Translation": 0.21,
+        "Diagnostic Questioning": 0.57,
+        "Epistemic Calibration": 0.36,
+        "Brevity": 0.8,
+        "Switching": 0.75,
+        "General Knowledge": 0.88
+      },
+      "knowledge_subcategory_scores": {
+        "D": 0.43,
+        "A": 0.56,
+        "E": 0.3,
+        "C": 0.17,
+        "F": 0.27,
+        "G": 0.36,
+        "B": 0.25
+      }
+    }
+  }
+}

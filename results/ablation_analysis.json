@@ -1,0 +1,326 @@
+{
+  "study": "Ablation Study: Dataset Size Effect on 9B Model",
+  "model": "Qwen3.5-9B",
+  "sizes_tested": [
+    50,
+    100,
+    150,
+    200,
+    250,
+    300
+  ],
+  "metrics_by_size": {
+    "50": {
+      "n_examples": 50,
+      "avg_signal_score": 0.3919,
+      "signal_density": 0.3134,
+      "visible_density": 0.4638,
+      "avg_word_count": 853.0,
+      "by_subcategory": {
+        "D": {
+          "signal_score": 0.4309,
+          "density": 0.3803,
+          "n_questions": 11
+        },
+        "A": {
+          "signal_score": 0.5614,
+          "density": 0.4062,
+          "n_questions": 7
+        },
+        "E": {
+          "signal_score": 0.305,
+          "density": 0.2663,
+          "n_questions": 6
+        },
+        "C": {
+          "signal_score": 0.1675,
+          "density": 0.1121,
+          "n_questions": 4
+        },
+        "F": {
+          "signal_score": 0.272,
+          "density": 0.2379,
+          "n_questions": 5
+        },
+        "G": {
+          "signal_score": 0.362,
+          "density": 0.3706,
+          "n_questions": 5
+        },
+        "B": {
+          "signal_score": 0.2533,
+          "density": 0.2045,
+          "n_questions": 3
+        }
+      }
+    },
+    "100": {
+      "n_examples": 100,
+      "avg_signal_score": 0.3572,
+      "signal_density": 0.3863,
+      "visible_density": 0.5701,
+      "avg_word_count": 620.0,
+      "by_subcategory": {
+        "D": {
+          "signal_score": 0.3191,
+          "density": 0.4389,
+          "n_questions": 11
+        },
+        "A": {
+          "signal_score": 0.3914,
+          "density": 0.3553,
+          "n_questions": 7
+        },
+        "E": {
+          "signal_score": 0.3383,
+          "density": 0.3669,
+          "n_questions": 6
+        },
+        "C": {
+          "signal_score": 0.1775,
+          "density": 0.1806,
+          "n_questions": 4
+        },
+        "F": {
+          "signal_score": 0.334,
+          "density": 0.3639,
+          "n_questions": 5
+        },
+        "G": {
+          "signal_score": 0.396,
+          "density": 0.614,
+          "n_questions": 5
+        },
+        "B": {
+          "signal_score": 0.24,
+          "density": 0.2179,
+          "n_questions": 3
+        }
+      }
+    },
+    "150": {
+      "n_examples": 150,
+      "avg_signal_score": 0.3049,
+      "signal_density": 0.4257,
+      "visible_density": 0.575,
+      "avg_word_count": 470.0,
+      "by_subcategory": {
+        "D": {
+          "signal_score": 0.2464,
+          "density": 0.435,
+          "n_questions": 11
+        },
+        "A": {
+          "signal_score": 0.3557,
+          "density": 0.3472,
+          "n_questions": 7
+        },
+        "E": {
+          "signal_score": 0.2717,
+          "density": 0.4501,
+          "n_questions": 6
+        },
+        "C": {
+          "signal_score": 0.2625,
+          "density": 0.3214,
+          "n_questions": 4
+        },
+        "F": {
+          "signal_score": 0.274,
+          "density": 0.4398,
+          "n_questions": 5
+        },
+        "G": {
+          "signal_score": 0.248,
+          "density": 0.7647,
+          "n_questions": 5
+        },
+        "B": {
+          "signal_score": 0.2067,
+          "density": 0.2446,
+          "n_questions": 3
+        }
+      }
+    },
+    "200": {
+      "n_examples": 200,
+      "avg_signal_score": 0.2856,
+      "signal_density": 0.5287,
+      "visible_density": 0.6596,
+      "avg_word_count": 356.0,
+      "by_subcategory": {
+        "D": {
+          "signal_score": 0.2245,
+          "density": 0.5616,
+          "n_questions": 11
+        },
+        "A": {
+          "signal_score": 0.3443,
+          "density": 0.7828,
+          "n_questions": 7
+        },
+        "E": {
+          "signal_score": 0.245,
+          "density": 0.4318,
+          "n_questions": 6
+        },
+        "C": {
+          "signal_score": 0.2425,
+          "density": 0.3825,
+          "n_questions": 4
+        },
+        "F": {
+          "signal_score": 0.264,
+          "density": 0.3911,
+          "n_questions": 5
+        },
+        "G": {
+          "signal_score": 0.238,
+          "density": 0.616,
+          "n_questions": 5
+        },
+        "B": {
+          "signal_score": 0.15,
+          "density": 0.2313,
+          "n_questions": 3
+        }
+      }
+    },
+    "250": {
+      "n_examples": 250,
+      "avg_signal_score": 0.2784,
+      "signal_density": 0.6325,
+      "visible_density": 0.6842,
+      "avg_word_count": 298.0,
+      "by_subcategory": {
+        "D": {
+          "signal_score": 0.2464,
+          "density": 0.6792,
+          "n_questions": 11
+        },
+        "A": {
+          "signal_score": 0.2557,
+          "density": 0.5769,
+          "n_questions": 7
+        },
+        "E": {
+          "signal_score": 0.2233,
+          "density": 0.3594,
+          "n_questions": 6
+        },
+        "C": {
+          "signal_score": 0.365,
+          "density": 0.731,
+          "n_questions": 4
+        },
+        "F": {
+          "signal_score": 0.252,
+          "density": 0.8729,
+          "n_questions": 5
+        },
+        "G": {
+          "signal_score": 0.324,
+          "density": 0.967,
+          "n_questions": 5
+        },
+        "B": {
+          "signal_score": 0.2633,
+          "density": 0.5302,
+          "n_questions": 3
+        }
+      }
+    },
+    "300": {
+      "n_examples": 300,
+      "avg_signal_score": 0.2588,
+      "signal_density": 0.717,
+      "visible_density": 0.7799,
+      "avg_word_count": 243.0,
+      "by_subcategory": {
+        "D": {
+          "signal_score": 0.2627,
+          "density": 0.8368,
+          "n_questions": 11
+        },
+        "A": {
+          "signal_score": 0.18,
+          "density": 0.5984,
+          "n_questions": 7
+        },
+        "E": {
+          "signal_score": 0.22,
+          "density": 0.5448,
+          "n_questions": 6
+        },
+        "C": {
+          "signal_score": 0.2075,
+          "density": 0.4619,
+          "n_questions": 4
+        },
+        "F": {
+          "signal_score": 0.228,
+          "density": 0.7168,
+          "n_questions": 5
+        },
+        "G": {
+          "signal_score": 0.254,
+          "density": 1.1547,
+          "n_questions": 5
+        },
+        "B": {
+          "signal_score": 0.25,
+          "density": 0.6337,
+          "n_questions": 3
+        }
+      }
+    }
+  },
+  "minimum_viable_dataset_sizes": {},
+  "marginal_returns": [
+    {
+      "from": 50,
+      "to": 100,
+      "delta_examples": 50,
+      "delta_signal": -0.0347,
+      "delta_density": 0.1063,
+      "signal_per_example": -0.000694,
+      "density_per_example": 0.002126
+    },
+    {
+      "from": 100,
+      "to": 150,
+      "delta_examples": 50,
+      "delta_signal": -0.0523,
+      "delta_density": 0.0049,
+      "signal_per_example": -0.001046,
+      "density_per_example": 9.8e-05
+    },
+    {
+      "from": 150,
+      "to": 200,
+      "delta_examples": 50,
+      "delta_signal": -0.0193,
+      "delta_density": 0.0846,
+      "signal_per_example": -0.000386,
+      "density_per_example": 0.001692
+    },
+    {
+      "from": 200,
+      "to": 250,
+      "delta_examples": 50,
+      "delta_signal": -0.0072,
+      "delta_density": 0.0246,
+      "signal_per_example": -0.000144,
+      "density_per_example": 0.000492
+    },
+    {
+      "from": 250,
+      "to": 300,
+      "delta_examples": 50,
+      "delta_signal": -0.0196,
+      "delta_density": 0.0957,
+      "signal_per_example": -0.000392,
+      "density_per_example": 0.001914
+    }
+  ]
+}
