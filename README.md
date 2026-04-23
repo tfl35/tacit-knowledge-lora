@@ -102,7 +102,7 @@ Trained adapters in GGUF format are available on HuggingFace:
 
 | Model | Examples | Description | Link |
 |---|---|---|---|
-| TI-Analyst-9B | 350 | Full power: highest reasoning quality, requires GPU | [HuggingFace](https://huggingface.co/tfl35/ti-analyst-9b) *model being added*|
+| TI-Analyst-9B | 350 | Full power: highest reasoning quality, requires GPU | [HuggingFace]([https://huggingface.co/tfl35/ti-analyst-9b](https://huggingface.co/tfl35/ti-analyst-9b) |
 | **TI-Analyst-4B-150** | 150 | Recommended: sweet spot dataset size, Level 3 TI reasoning on 8 GB RAM | [HuggingFace](https://huggingface.co/tfl35/ti-analyst-4b-150) *model being added*|
 
 ## Repository Structure
