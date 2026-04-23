@@ -119,6 +119,7 @@ tacit-knowledge-lora/
 │   ├── ti_350_production.json
 │   └── README.md           # Format spec, quality criteria, construction methodology
 ├── results/                # Cross-scale analysis, ablation, divergence summaries
+├── demo/                   # Screenshare video comparing base and fine-tuned 9b models
 ├── research/               # Full academic report
 │   └── final_report.md
 └── docs/
