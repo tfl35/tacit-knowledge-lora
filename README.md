@@ -18,7 +18,7 @@ This project tests whether parameter-efficient fine-tuning can encode that analy
 
 ## What This Project Does
 
-Fine-tunes the [Qwen3.5](https://huggingface.co/Qwen) model family across four parameter scales (9B, 4B, 2B, 0.8B) on 350 expert-curated talent intelligence examples using bf16 LoRA. All four models share the same hybrid attention architecture ([Gated DeltaNet](https://arxiv.org/abs/2412.06464)), tokenizer, and chat template, isolating parameter capacity as the single independent variable. Evaluates using eight complementary methods including a dataset size ablation study and logit-level behavioral divergence analysis. The full pipeline runs in **5.2 GPU-hours** on an NVIDIA DGX Spark.
+Fine-tunes the [Qwen3.5](https://huggingface.co/Qwen) model family across four parameter scales (9B, 4B, 2B, 0.8B) on 350 expert-curated talent intelligence examples using bf16 LoRA. All four models share the same hybrid attention architecture ([Gated DeltaNet](https://arxiv.org/abs/2412.06464)), tokenizer, and chat template, isolating parameter capacity as the single independent variable. Evaluates using eight complementary methods including a dataset size ablation study and logit-level behavioral divergence analysis. The full pipeline runs in **~6 GPU-hours** on an NVIDIA DGX Spark.
 
 The training data encodes one analyst's reasoning patterns: diagnostic questioning, source evaluation, premise challenging, and calibrated recommendations across seven knowledge subcategories validated against Culshaw's (2022) talent intelligence frameworks.
 
