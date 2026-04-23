@@ -1,4 +1,4 @@
-# Encoding Tacit Knowledge into Open-Weight Language Models via LoRa
+# Encoding Tacit Knowledge into Open-Weight Language Models via LoRA
 
 A cross-scale study of encoding domain expertise into downloadable model weights through parameter-efficient fine-tuning, and what it reveals about how expertise actually works.
 
