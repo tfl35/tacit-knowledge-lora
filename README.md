@@ -10,7 +10,9 @@ The model that most deeply internalized domain expertise produced the shortest r
 
 ## The Problem
 
-Talent intelligence, the discipline of interpreting labor market signals to inform workforce strategy, depends on analytical judgment that no dataset captures. An experienced analyst evaluates compensation survey methodology before trusting it, challenges a stakeholder's premise before analyzing their data, and synthesizes noisy signals into calibrated recommendations. That expertise is concentrated in large enterprises with dedicated teams. Community workforce programs, small nonprofits, and local governments making labor market investment decisions operate without any of it. This project tests whether parameter-efficient fine-tuning can encode that analytical reasoning into open-weight model weights, and if so, which dimensions of expertise survive compression to smaller models.
+Talent intelligence, the discipline of interpreting labor market signals to inform workforce strategy, depends on analytical judgment that no dataset captures. An experienced analyst evaluates compensation survey methodology before trusting it, challenges a stakeholder's premise before analyzing their data, and synthesizes noisy signals into calibrated recommendations. That expertise is concentrated in large enterprises with dedicated teams. Community workforce programs, small nonprofits, and local governments making labor market investment decisions operate without any of it. 
+
+This project tests whether parameter-efficient fine-tuning can encode that analytical reasoning into open-weight model weights, and if so, which dimensions of expertise survive compression to smaller models.
 
 ## What This Project Does
 
@@ -50,7 +52,9 @@ These thresholds provide practical guidance for adapter deployment decisions, th
 
 ### The Diagnostic Questioning Reversal
 
-Nonaka and Takeuchi (1995) predicted that "negative knowledge" (knowing what to ask before answering, what to ignore, when to push back) would resist externalization. Signal-based scoring confirmed this at every scale: the behavior appeared to fail. The LLM-as-judge reversed the finding. The 9B scored **4.0/5** on diagnostic questioning, with reasoning strategy at 4.75 and epistemic calibration at 4.75. The behavior had encoded so deeply it left no vocabulary trace. The model learned *when* to ask, not which keywords to use. This is a single result in a single domain at a single scale, not a general overthrow of the theory. But it suggests that some dimensions of tacit expertise may transfer more readily through behavioral demonstration than through structured articulation, and that the ceiling on externalization may depend on the medium more than the field has assumed.
+Nonaka and Takeuchi (1995) predicted that "negative knowledge" (knowing what to ask before answering, what to ignore, when to push back) would resist externalization. Signal-based scoring confirmed this at every scale: the behavior appeared to fail. The LLM-as-judge reversed the finding. The 9B scored **4.0/5** on diagnostic questioning, with reasoning strategy at 4.75 and epistemic calibration at 4.75. The behavior had encoded so deeply it left no vocabulary trace. The model learned *when* to ask, not which keywords to use. 
+
+This is a single result in a single domain at a single scale, not a general overthrow of the theory. But it suggests that some dimensions of tacit expertise may transfer more readily through behavioral demonstration than through structured articulation, and that the ceiling on externalization may depend on the medium more than the field has assumed.
 
 ### The 125-Example Sweet Spot
 
