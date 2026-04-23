@@ -1,8 +1,8 @@
 # Encoding Tacit Knowledge into Open-Weight Language Models via LoRA
 
 ## A Cross-Scale Knowledge Fidelity Analysis
-*Working Draft, April 2026*
 ---
+*Working Draft, April 2026*
 
 ## Introduction
 
