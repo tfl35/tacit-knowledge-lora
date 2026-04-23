@@ -6,15 +6,21 @@ A cross-scale study of encoding domain expertise into downloadable model weights
 
 ## The Finding That Changed the Project
 
-The model that most deeply internalized domain expertise produced the shortest responses, scored zero on the keyword evaluation built to measure it, and was rated 4.6/5 by an independent qualitative judge. It had learned to reason rather than recite, and the evaluation framework designed to detect expertise was systematically penalizing mastery. That inversion (expertise producing *fewer* words, not more, and becoming *invisible* to surface-level measurement as it deepens) is the central finding of this project. It has implications for how organizations measure capability, how knowledge management theory models the limits of expertise transfer, and how practitioners should approach fine-tuning for domain reasoning.
+The model that most deeply internalized domain expertise produced the shortest responses, scored zero on the keyword evaluation built to measure it, and was rated 4.6/5 by an independent qualitative judge. It had learned to reason rather than recite, and the evaluation framework designed to detect expertise was systematically penalizing mastery.
+
+That inversion (expertise producing *fewer* words, not more, and becoming *invisible* to surface-level measurement as it deepens) is the central finding of this project. It has implications for how organizations measure capability, how knowledge management theory models the limits of expertise transfer, and how practitioners should approach fine-tuning for domain reasoning.
 
 ## The Problem
 
-Talent intelligence, the discipline of interpreting labor market signals to inform workforce strategy, depends on analytical judgment that no dataset captures. An experienced analyst evaluates compensation survey methodology before trusting it, challenges a stakeholder's premise before analyzing their data, and synthesizes noisy signals into calibrated recommendations. That expertise is concentrated in large enterprises with dedicated teams. Community workforce programs, small nonprofits, and local governments making labor market investment decisions operate without any of it. This project tests whether parameter-efficient fine-tuning can encode that analytical reasoning into open-weight model weights, and if so, which dimensions of expertise survive compression to smaller models.
+Talent intelligence, the discipline of interpreting labor market signals to inform workforce strategy, depends on analytical judgment that no dataset captures. An experienced analyst evaluates compensation survey methodology before trusting it, challenges a stakeholder's premise before analyzing their data, and synthesizes noisy signals into calibrated recommendations. That expertise is concentrated in large enterprises with dedicated teams. Community workforce programs, small nonprofits, and local governments making labor market investment decisions operate without any of it.
+
+This project tests whether parameter-efficient fine-tuning can encode that analytical reasoning into open-weight model weights, and if so, which dimensions of expertise survive compression to smaller models.
 
 ## What This Project Does
 
-Fine-tunes the [Qwen3.5](https://huggingface.co/Qwen) model family across four parameter scales (9B, 4B, 2B, 0.8B) on 350 expert-curated talent intelligence examples using bf16 LoRA. All four models share the same hybrid attention architecture ([Gated DeltaNet](https://arxiv.org/abs/2412.06464)), tokenizer, and chat template, isolating parameter capacity as the single independent variable. Evaluates using eight complementary methods including a dataset size ablation study and logit-level behavioral divergence analysis. The full pipeline runs in **5.2 GPU-hours** on an NVIDIA DGX Spark. The training data encodes one analyst's reasoning patterns: diagnostic questioning, source evaluation, premise challenging, and calibrated recommendations across seven knowledge subcategories validated against Culshaw's (2022) talent intelligence frameworks.
+Fine-tunes the [Qwen3.5](https://huggingface.co/Qwen) model family across four parameter scales (9B, 4B, 2B, 0.8B) on 350 expert-curated talent intelligence examples using bf16 LoRA. All four models share the same hybrid attention architecture ([Gated DeltaNet](https://arxiv.org/abs/2412.06464)), tokenizer, and chat template, isolating parameter capacity as the single independent variable. Evaluates using eight complementary methods including a dataset size ablation study and logit-level behavioral divergence analysis. The full pipeline runs in **5.2 GPU-hours** on an NVIDIA DGX Spark.
+
+The training data encodes one analyst's reasoning patterns: diagnostic questioning, source evaluation, premise challenging, and calibrated recommendations across seven knowledge subcategories validated against Culshaw's (2022) talent intelligence frameworks.
 
 ## Key Findings
 
@@ -50,7 +56,11 @@ These thresholds provide practical guidance for adapter deployment decisions, th
 
 ### The Diagnostic Questioning Reversal
 
-Nonaka and Takeuchi (1995) predicted that "negative knowledge" (knowing what to ask before answering, what to ignore, when to push back) would resist externalization. Signal-based scoring confirmed this at every scale: the behavior appeared to fail. The LLM-as-judge reversed the finding. The 9B scored **4.0/5** on diagnostic questioning, with reasoning strategy at 4.75 and epistemic calibration at 4.75. The behavior had encoded so deeply it left no vocabulary trace. The model learned *when* to ask, not which keywords to use. This is a single result in a single domain at a single scale, not a general overthrow of the theory. But it suggests that some dimensions of tacit expertise may transfer more readily through behavioral demonstration than through structured articulation, and that the ceiling on externalization may depend on the medium more than the field has assumed.
+Nonaka and Takeuchi (1995) predicted that "negative knowledge" (knowing what to ask before answering, what to ignore, when to push back) would resist externalization. Signal-based scoring confirmed this at every scale: the behavior appeared to fail.
+
+The LLM-as-judge reversed the finding. The 9B scored **4.0/5** on diagnostic questioning, with reasoning strategy at 4.75 and epistemic calibration at 4.75. The behavior had encoded so deeply it left no vocabulary trace. The model learned *when* to ask, not which keywords to use.
+
+This is a single result in a single domain at a single scale, not a general overthrow of the theory. But it suggests that some dimensions of tacit expertise may transfer more readily through behavioral demonstration than through structured articulation, and that the ceiling on externalization may depend on the medium more than the field has assumed.
 
 ### The 125-Example Sweet Spot
 
@@ -94,9 +104,8 @@ Trained adapters in GGUF format are available on HuggingFace:
 
 | Model | Examples | Description | Link |
 |---|---|---|---|
-| **TI-Analyst-4B** | 350 | Recommended for deployment: Level 3 TI reasoning on 8 GB RAM | [HuggingFace](https://huggingface.co/tfl35/ti-analyst-4b) |
-| TI-Analyst-4B-150 | 150 | Sweet spot demonstration: comparable quality from fewer examples | [HuggingFace](https://huggingface.co/tfl35/ti-analyst-4b-150) |
-| TI-Analyst-9B | 350 | Advanced: highest reasoning quality, requires GPU | [HuggingFace](https://huggingface.co/tfl35/ti-analyst-9b) |
+| TI-Analyst-9B | 350 | Full power: highest reasoning quality, requires GPU | [HuggingFace](https://huggingface.co/tfl35/ti-analyst-9b) |
+| **TI-Analyst-4B-150** | 150 | Recommended: sweet spot dataset size, Level 3 TI reasoning on 8 GB RAM | [HuggingFace](https://huggingface.co/tfl35/ti-analyst-4b-150) |
 
 ## Repository Structure
 
@@ -124,7 +133,9 @@ tacit-knowledge-lora/
     └── hardware.md              # DGX Spark notes + memory constraints
 ```
 
-The `pipeline/` directory contains the talent-intelligence-specific code used in the research. The `tools/` directory contains domain-agnostic versions of the evaluation methodology. Start here if you're adapting this for your own domain. See [`tools/README.md`](tools/README.md) for the full workflow. The full 350-example training dataset is included in the [`dataset/`](dataset/) directory along with format documentation and quality criteria.
+The `pipeline/` directory contains the talent-intelligence-specific code used in the research. The `tools/` directory contains domain-agnostic versions of the evaluation methodology. Start here if you're adapting this for your own domain. See [`tools/README.md`](tools/README.md) for the full workflow.
+
+The full 350-example training dataset is included in the [`dataset/`](dataset/) directory along with format documentation and quality criteria.
 
 ## Quick Start
 
@@ -133,8 +144,8 @@ The `pipeline/` directory contains the talent-intelligence-specific code used in
 Download from HuggingFace and run locally with [Ollama](https://ollama.ai):
 
 ```bash
-# Download and run the recommended 4B model
-ollama run tfl35/ti-analyst-4b
+# Download and run the recommended 4B model (150 examples, sweet spot)
+ollama run tfl35/ti-analyst-4b-150
 
 # Example query
 >>> Our vendor says 85% of companies are struggling to hire AI talent. Should we be worried?
