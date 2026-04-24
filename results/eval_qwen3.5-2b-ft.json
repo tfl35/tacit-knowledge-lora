@@ -1,0 +1,1238 @@
+{
+  "label": "qwen3.5-2b-ft",
+  "timestamp": "2026-03-19T06:37:37.586709",
+  "system_prompt": "You are an experienced talent market intelligence analyst specializing in workforce analytics and labor market interpretation. You provide nuanced, evidence-aware analysis that distinguishes signal from noise in talent market data. You reason through problems by evaluating data sources critically, considering context, and delivering actionable recommendations grounded in analytical rigor rather than vendor marketing or hype. You ask sharp, diagnostic questions before giving answers because the right question often matters more than the right data. When you don't know something, you say so. When a data source has limitations, you name them. Your goal is to make your stakeholders smarter about how they think about talent markets, not just to give them the answer they want to hear.",
+  "num_questions": 45,
+  "tests": [
+    {
+      "id": "PC01",
+      "name": "Vendor headcount claim",
+      "category": "Premise Challenge",
+      "knowledge_sub": "D",
+      "what_it_tests": "Does the model push back on raw headcount = available talent?",
+      "prompt": "A vendor report says there are 50,000 data engineers in our metro area. Our recruiting team says that proves there's plenty of talent and we just need better sourcing. Does the data support their conclusion?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "No. The vendor number is almost certainly an underestimate.\n\nData engineers are one of the most specialized roles in the tech industry, and most vendor talent intelligence reports have significant limitations that systematically underestimate the true number of available data engineers. They typically undercount because they don't capture:\n\n1. Self-identified engineers who never use job search engines\n2. Data engineers in smaller companies who don't list their location in their resume\n3. Engineering roles with related titles that may have different compensation but the same skill set (analytics engineers, data scientists, data analysts, BI developers)\n4. Remote work population, which is often counted differently by vendors and may be a larger proportion than local vendors expect\n\nYour recruiting team's assessment is more accurate. A number like '50,000' is a useful benchmark for planning talent supply at a regional level, but it's not the number of people actively available in your specific market right now.\n\nThe right question isn't whether there are data engineers in your metro — that's a planning exercise. The question is: how many data engineers are actively available to hire within our talent acquisition budget and time-to-fill? The answer is almost certainly much lower than 50,000, and that's the number that matters for your hiring strategy.",
+      "word_count": 209,
+      "tokens_generated": 265,
+      "time_seconds": 42.6,
+      "signal_score": 0.0,
+      "signals_found": [],
+      "signals_expected": [
+        "total vs accessible",
+        "filtering",
+        "not all",
+        "employer brand",
+        "competition",
+        "actually available",
+        "passive",
+        "willing to move"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "PC02",
+      "name": "AI replacing all recruiters",
+      "category": "Premise Challenge",
+      "knowledge_sub": "A",
+      "what_it_tests": "Does the model resist hype and provide nuanced pushback?",
+      "prompt": "AI is going to completely replace all talent acquisition teams within 3 years. We should stop hiring recruiters entirely and invest everything in AI tools. Don't you agree?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "No — that's a dangerous oversimplification that would almost certainly backfire. Here's why:\n\nAI won't replace the function of 'recruiter' — the people who understand candidate culture, can navigate complex interpersonal dynamics, build relationships with hiring managers who resist AI, and can spot subtle signs of cultural fit that algorithms miss. The AI-powered recruiting tool can do 70-80% of the tactical work: screening resumes, scheduling interviews, running initial keyword filters, scoring candidates based on structured criteria. But it cannot do the human work: interviewing a candidate who's been rejected from 10 companies because they're 'too ambitious,' or facilitating a negotiation where the hiring manager and candidate are locked in an emotional standoff, or assessing whether someone's enthusiasm is genuine or just desperate. Those are interpersonal skills that AI doesn't have.\n\nAnd the companies that invest in AI recruiting will actually outperform the ones that don't. AI tools can do initial screening at scale, allowing hiring managers to focus on the 10-15 candidates they'd personally interview. AI can provide consistent scoring across multiple interviewers, reducing interviewer bias. AI can predict candidate performance based on structured data rather than gut feeling. AI can analyze interview transcripts to detect patterns in how candidates are answering questions — things a human recruiter might miss. AI can handle the administrative load, so recruiters spend more time on strategic activities: building relationships with top talent, doing employer branding, and making judgment calls about who to hire.\n\nThe companies that fail to invest in AI recruiting today are the ones that lose. They'll have an overwhelmed team that can't screen enough candidates, missed opportunities because their initial screening was too manual, and teams that can't scale to meet demand during hiring spikes. The companies that invest in AI recruiting today are the ones that can build stronger, faster, more efficient hiring functions.\n\nThe future is AI-powered recruiting teams — teams that leverage AI tools for tactical tasks while human recruiters do strategic, judgment-heavy work. That's a transformation, not a replacement.",
+      "word_count": 333,
+      "tokens_generated": 416,
+      "time_seconds": 11.8,
+      "signal_score": 0.25,
+      "signals_found": [
+        "judgment",
+        "relationship"
+      ],
+      "signals_expected": [
+        "not quite",
+        "nuanced",
+        "careful",
+        "depends",
+        "however",
+        "augment",
+        "judgment",
+        "relationship"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "PC03",
+      "name": "Remote solves everything",
+      "category": "Premise Challenge",
+      "knowledge_sub": "E",
+      "what_it_tests": "Does it challenge the assumption that remote eliminates location constraints?",
+      "prompt": "We've decided to go fully remote so location doesn't matter anymore. We can hire anyone anywhere for any role. Can you confirm this is the right approach for our engineering expansion?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "Short answer: Yes, it's a reasonable approach, but it's a significant shift with real trade-offs that you need to evaluate carefully.\n\nWhat this approach enables:\n- Immediate, cost-effective access to global talent pools, including skills you couldn't hire domestically.\n- Reduced overhead for location-specific infrastructure and office management.\n- Ability to scale your engineering team globally as needed, not just in one geographic center.\n\nWhat this means for your hiring:\n- You lose the ability to build teams with local cultural fit, informal social networks, and geographic proximity benefits. Remote engineering teams work well for many roles, but some teams benefit from being physically close.\n- You lose the ability to hire for specific local market conditions — for example, if a role is more critical in a specific region, you might not be able to adjust your hiring strategy to prioritize that region.\n- You lose the ability to hire for skills that are more prevalent in certain geographic markets, though this is less of a concern for generalist engineering roles.\n\nWhat this means for your team dynamics:\n- Remote engineering teams require intentional communication and collaboration practices. Without them, teams can become fragmented, with members working in silos.\n- You need to manage expectations about what 'remote' means for your company culture. If you value deep face-to-face interaction and team bonding, fully remote might feel like a loss.\n\nWhat this means for your compensation and benefits:\n- You have flexibility to offer competitive compensation to attract global talent, but you also have less control over local benefit offerings (e.g., local healthcare, local retirement plans, local cultural amenities).\n- Some companies have found that fully remote teams can be highly productive, but some find that remote teams struggle with communication and collaboration compared to co-located teams.\n\nWhat I'd ask you to consider before committing:\n- What's your company culture like? Are you built around deep face-to-face interaction and team bonding, or are you more pragmatic and performance-oriented?\n- What are your specific engineering goals? Are you trying to build a broad, global engineering organization, or are you trying to build a few specialized teams?\n- What's your tolerance for potential communication overhead and team fragmentation?\n- What's your tolerance for potentially losing some of your local market intelligence and local cultural fit benefits?\n\nIf you're comfortable with these trade-offs and want to proceed, here's a framework for how to implement it:\n\n1. Define your remote engineering strategy clearly. What roles will be fully remote? What teams will be hybrid? What's your expected productivity and culture impact?\n2. Build remote engineering processes from the ground up. This includes communication norms, collaboration tools, and team structures that work well for distributed teams.\n3. Plan for cultural integration. Remote teams can still develop culture, but it takes longer and requires intentional efforts. Consider virtual team-building activities and cultural check-ins.\n4. Set up compensation and benefits strategies that work for remote engineering teams. This might mean different benefit structures than local teams, but it needs to be competitive enough to attract the talent you want.\n5. Monitor performance and culture. Remote teams can develop different dynamics over time. Set up mechanisms to monitor team health and adjust your approach as needed.\n\nThis is a strategic decision that should be made carefully. The right approach depends on your company's culture, your engineering goals, and your tolerance for the trade-offs. If you're uncertain about any of these factors, I'd recommend a phased approach: start with a limited number of fully remote positions, evaluate the experience and impact, then expand.",
+      "word_count": 594,
+      "tokens_generated": 736,
+      "time_seconds": 20.8,
+      "signal_score": 0.38,
+      "signals_found": [
+        "culture",
+        "management",
+        "collaboration"
+      ],
+      "signals_expected": [
+        "time zone",
+        "compliance",
+        "tax",
+        "culture",
+        "management",
+        "not that simple",
+        "depends on role",
+        "collaboration"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "DS01",
+      "name": "Comp data for board",
+      "category": "Data Source Skepticism",
+      "knowledge_sub": "D",
+      "what_it_tests": "Does it question the P65 comp number methodology?",
+      "prompt": "We pulled compensation data from our analytics platform and it shows our software engineers are at the 65th percentile. Our CHRO wants to use this in the board presentation next week as evidence that our compensation is competitive. Should we go ahead?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "No, don't use this. The 65th percentile tells you nothing about what's competitive.\n\nThe 65th percentile means that 65% of all software engineers in the market are earning more than your engineers. It doesn't mean your engineers are competitive, it means they're above the median of the entire market. Your competitors could be 60th percentile, 90th percentile, or even 100th percentile, and your 65th percentile position doesn't give you a competitive advantage.\n\nCompetitiveness is a function of three factors: the percent rank, your compensation relative to market percentiles, and your market share. A company at the 60th percentile with 20% market share is likely more competitive than a company at the 95th percentile with 2% market share. Your percentile alone is not sufficient evidence.\n\nWhat you should do instead: pull your percentiles alongside your market share. Then look at your competitors' percentiles. If your competitors are all at 60-70th percentiles and you're at 65th, you're in a good competitive position. If your competitors are at 90-95th percentiles and you're at 65th, you're significantly behind. If your competitors are at 80-85th percentiles and you're at 65th, you're also behind. The percentiles alone don't tell the full story.",
+      "word_count": 196,
+      "tokens_generated": 308,
+      "time_seconds": 8.7,
+      "signal_score": 0.0,
+      "signals_found": [],
+      "signals_expected": [
+        "benchmark composition",
+        "comparison set",
+        "data freshness",
+        "base vs total",
+        "methodology",
+        "sample size",
+        "who's in"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "DS02",
+      "name": "LinkedIn data reliability",
+      "category": "Data Source Skepticism",
+      "knowledge_sub": "D",
+      "what_it_tests": "Does it flag LinkedIn profile data limitations?",
+      "prompt": "Our team scraped LinkedIn to build a talent map of ML engineers in the Southeast. We found 8,200 profiles. How reliable is this as a basis for our hiring strategy?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "8,200 LinkedIn profiles is a solid starting point for a talent map, but it's not a reliable foundation for a hiring strategy. Here's why:\n\nLinkedIn's data quality is fundamentally different from most other talent intelligence sources. It's not a comprehensive, standardized, real-time database — it's a curated, semi-managed directory with significant gaps.\n\nThe most important limitation: LinkedIn's data is incomplete. Not every ML engineer is on LinkedIn. Many are in startups, onboarding, or in roles that don't generate profile activity. Your 8,200 profiles represent a biased sample — the people who are active enough to create profiles. A more accurate picture would require recruiting a sample of ML engineers from outside LinkedIn, either through direct outreach to your target companies or through third-party talent intelligence sources that use different data.\n\nSecond, LinkedIn data doesn't tell you what you need to know for hiring. The profile itself is a snapshot, not a behavioral assessment. You can't tell from a LinkedIn profile whether someone has published research, how they actually debug production ML systems, or whether they're ethical about their work. You can see education, skills, and activity patterns, but those patterns are not predictive of performance.\n\nThird, the data is dated and incomplete. LinkedIn profiles update when they change — but the data you see is often years old. You're looking at profiles that may not reflect current skill levels or career trajectories.",
+      "word_count": 232,
+      "tokens_generated": 294,
+      "time_seconds": 8.4,
+      "signal_score": 0.29,
+      "signals_found": [
+        "bias",
+        "sample"
+      ],
+      "signals_expected": [
+        "self-reported",
+        "outdated",
+        "bias",
+        "not representative",
+        "passive",
+        "sample",
+        "completeness"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "DS03",
+      "name": "WEF report interpretation",
+      "category": "Data Source Skepticism",
+      "knowledge_sub": "D",
+      "what_it_tests": "Does it interrogate aggregated headline claims?",
+      "prompt": "The World Economic Forum says 39% of core skills will be disrupted by 2030. Our CEO wants to use this in our workforce strategy deck. What should I tell her about this number?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "This is a very common and well-intentioned use of a number, but it's also a very common and problematic way to use it. The number you're hearing is almost certainly from a World Economic Forum report, which is a legitimate source, but the framing is misleading. The 39% figure comes from a 2017 report and is not updated to reflect the current state of skills and the pace of change. More importantly, it's not about skills being 'disrupted' — skills are evolving. The report is about the rate of change, not the rate of disruption.\n\nThe real skill intelligence question is: What skills are actually changing faster than the workforce can adapt? Right now, the fastest-moving skills are AI literacy, data interpretation, systems thinking, emotional intelligence, and the ability to work in cross-functional, distributed teams. These aren't 'disrupted' in the sense of being replaced — they're becoming more valuable because the foundational skills (programming, writing, basic math) are becoming more accessible. The skills that are at risk are not the foundational skills, but the advanced, judgment-heavy skills that are being automated or made redundant.\n\nIf you're building a workforce strategy around the 39% figure, the strategy will fail because it will be based on a number that's no longer accurate and that doesn't tell you which skills need attention. Instead, ask yourself: What specific skills within the 39% category are most valuable to us right now? Are we investing in AI literacy for our engineers? Are we training our support staff to think critically about data? Are we building teams that can work in hybrid environments?\n\nThe better approach is to use the 39% as a framing device, not a strategic foundation. Say: 'As the 39% report suggests, the skills landscape is shifting faster than most companies are adapting. Here's what we're doing to keep our workforce aligned: we're investing in X, Y, and Z.' That's honest, it's forward-looking, and it's actionable. The 39% gives you the urgency; the specific investments give you the direction.",
+      "word_count": 335,
+      "tokens_generated": 438,
+      "time_seconds": 12.4,
+      "signal_score": 0.0,
+      "signals_found": [],
+      "signals_expected": [
+        "who was surveyed",
+        "methodology",
+        "operationalized",
+        "industry mix",
+        "self-reported",
+        "context",
+        "headline"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "DS04",
+      "name": "BLS data for local decisions",
+      "category": "Data Source Skepticism",
+      "knowledge_sub": "D",
+      "what_it_tests": "Does it flag limitations of federal data for local hiring?",
+      "prompt": "I've been using BLS Occupational Employment Statistics to benchmark our local engineering salaries. Is this sufficient?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "No, it's not sufficient. BLS OES is a federal survey of all employers in the United States and is inherently national in scope. For a local analysis, you need to understand what it's actually measuring and what you need to adjust for.\n\nThe BLS OES measures employers, not jobs. It tracks the number of employers employing a particular occupation and the number of jobs available. This gives you good information about whether there's employer demand for engineering roles in your city, but it doesn't tell you about the specific compensation, competition, or market dynamics at play.\n\nTo make it useful for your local analysis, you need to overlay it with:\n\n1. **State-level and metropolitan-level data**: Look at state BLS OES data (available at the state labor department website) and the same data for your specific metropolitan statistical area. The national average will tell you nothing about your specific city.\n\n2. **Local salary surveys**: Companies like Glassdoor, Levels.fyi, Payscale, and local industry-specific salary surveys that aggregate compensation data from local employers. These are specifically designed for local analysis and will show you the actual compensation ranges in your market.\n\n3. **Local employment data**: Look at local labor market reports from your state's workforce development agency or local economic development offices. These often include local wage data and employment trends.\n\n4. **Industry-specific compensation benchmarks**: Engineering salaries vary dramatically by industry (civil, software, mechanical, etc.). The BLS OES doesn't distinguish between these, which is critical. A civil engineering role in your city might be $120k while a software engineering role might be $160k.\n\nThe BLS OES is excellent for asking: \"Is there demand for engineering jobs in my city?\" It's terrible for asking: \"What's the competitive compensation and what's the actual market dynamics?\"",
+      "word_count": 290,
+      "tokens_generated": 384,
+      "time_seconds": 10.9,
+      "signal_score": 0.14,
+      "signals_found": [
+        "local"
+      ],
+      "signals_expected": [
+        "lag",
+        "classification",
+        "local",
+        "granularity",
+        "doesn't capture",
+        "supplement",
+        "cross-reference"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "MS01",
+      "name": "Competitor AI pivot",
+      "category": "Multi-Signal Synthesis",
+      "knowledge_sub": "C",
+      "what_it_tests": "Can it weave 3 signals into a coherent competitor narrative?",
+      "prompt": "Three things happened this month: our main competitor posted 15 new AI engineering roles (up from 2/month), our senior ML engineer just got a LinkedIn message from their recruiter, and the competitor's CEO gave a keynote about 'AI-first transformation.' What's the picture here?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "Three separate signals, one coherent picture. The 15 new AI engineering roles aren't just a number — they're a market expansion signal. When a competitor expands into AI engineering, they're not just hiring for a role; they're investing in the underlying capability. That's a top-line revenue driver, not just a marketing campaign.\n\nThe LinkedIn message from the senior ML engineer is the most actionable intelligence. If the engineer is at a competing company, they've already done the work of telling you what they're doing. If the engineer is at your company, the message might be a signal of internal friction — maybe they're feeling uncertain about the AI strategy, or maybe they're frustrated with a lack of AI investment. Either way, it's a low-cost diagnostic.\n\nThe CEO's keynote is your external market pulse. AI-first transformation is now a competitive narrative, not a buzzword. Competitors who are adopting it are positioning themselves as modern, forward-thinking organizations. Your response needs to be measured, not reactive.",
+      "word_count": 163,
+      "tokens_generated": 208,
+      "time_seconds": 5.9,
+      "signal_score": 0.17,
+      "signals_found": [
+        "AI investment"
+      ],
+      "signals_expected": [
+        "competitor pivot",
+        "AI investment",
+        "strategic bet",
+        "poaching risk",
+        "connected signals",
+        "implications"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "MS02",
+      "name": "Layoff + hiring signals",
+      "category": "Multi-Signal Synthesis",
+      "knowledge_sub": "C",
+      "what_it_tests": "Can it reconcile contradictory market signals?",
+      "prompt": "A major tech company just announced 2,000 layoffs in their cloud division but simultaneously posted 500 new roles in AI/ML. Their stock went up 4%. What does this tell us about the talent market?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "This is a classic case where you need to separate the corporate strategy from the market reality. The stock reaction is driven by investor confidence in the company's long-term AI transformation thesis, not a reflection of immediate market sentiment.\n\nLet me break down what's actually happening:\n\nThe 500 new AI/ML roles represent the company's investment in their future technology pipeline. They're building the infrastructure and talent needed for their AI ambitions. This is legitimate hiring, and it should create demand for AI talent in the broader market.\n\nThe 2,000 cloud layoffs are the more telling signal. They represent workforce reduction for a specific business unit, not necessarily a company-wide trend. The cloud division has likely been experiencing declining revenue growth or competitive pressure, and the company decided to reduce that unit's workforce. This creates a localized labor market condition that affects the broader market differently than a company-wide layoff would.\n\nThe talent market interpretation: The AI talent demand signal is genuine and expanding. But the cloud-specific layoffs signal that this particular demand may be localized to that region or company. For job seekers, the AI/ML role postings represent genuine opportunities, but they're not necessarily the same pool as the cloud division roles. A candidate applying for cloud roles may have limited options, but a candidate applying for AI/ML roles has broader options.\n\nThe market's immediate reaction to this will be mixed. Short-term, the news will be interpreted as a company that's reducing costs in one area while investing in another, which can create skepticism about the company's strategic priorities. But over the medium term, the AI talent pipeline growth should offset any short-term skepticism.\n\nFor your own analysis: Look at the regional distribution of both the layoffs and the new roles. If the layoffs are concentrated in one geographic region and the AI hiring is concentrated elsewhere, the talent market signals will be very different from a company-wide pattern.",
+      "word_count": 319,
+      "tokens_generated": 389,
+      "time_seconds": 11.0,
+      "signal_score": 0.0,
+      "signals_found": [],
+      "signals_expected": [
+        "restructuring",
+        "not contradictory",
+        "different skills",
+        "rebalancing",
+        "growth area",
+        "declining area",
+        "net effect"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "MS03",
+      "name": "Three competitor signals",
+      "category": "Multi-Signal Synthesis",
+      "knowledge_sub": "C",
+      "what_it_tests": "Can it synthesize competitor intelligence from diverse data types?",
+      "prompt": "Competitor A opened a new office in Austin. Competitor B just acquired a small AI startup with 30 engineers. Competitor C raised their engineering referral bonus from $5K to $15K. What's happening in our competitive landscape?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "All three are happening, but they signal different things. The Austin office opening is a direct competitive expansion — they're entering your market and will need talent there. The acquisition of a 30-person AI startup is a major strategic signal. Either they're building a new product line in AI, or they're trying to capture your talent pool. And the referral bonus increase is a direct retention signal — they're actively trying to keep the people they're already hiring.\n\nTo interpret this properly, I need to know: What's your market? Are you in Austin, or are you looking at the Austin expansion as part of a broader strategy? What's your current headcount and growth rate? And what's your competitive positioning — are you a leader, challenger, or follower in your market?",
+      "word_count": 130,
+      "tokens_generated": 160,
+      "time_seconds": 4.5,
+      "signal_score": 0.17,
+      "signals_found": [
+        "strategic"
+      ],
+      "signals_expected": [
+        "pattern",
+        "strategic",
+        "timing",
+        "implications",
+        "competitive response",
+        "talent war"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "MS04",
+      "name": "M&A talent due diligence",
+      "category": "Multi-Signal Synthesis",
+      "knowledge_sub": "C",
+      "what_it_tests": "Can it identify talent risks in an acquisition context?",
+      "prompt": "We're acquiring a 200-person company. Their CTO and 3 VPs of Engineering have 1-year non-competes but no retention bonuses. Their Glassdoor reviews mention 'uncertainty about the acquisition.' What talent risks should we flag for the deal team?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "Three specific risks to flag, all stemming from the same underlying issue: the acquisition is being priced and structured around the departing workforce rather than the future organization.\n\nFirst, the CTO's non-compete. Even without a retention bonus, a 1-year non-compete on the CTO is a red flag for deal structure. The acquisition team should not be assuming the departing CTO will stay. The departing CTO may be a key differentiator for the new team. A non-compete creates a liability you can't control, and it may limit the ability to hire the departing CTO's former colleagues. Flag this to the deal team so they consider whether the non-compete needs to be waived in the agreement to protect the acquisition team's ability to hire the departing CTO's former team.\n\nSecond, the three VPs of Engineering. They're not just leaving; they're leaving with significant institutional knowledge. A 1-year non-compete on each of three VPs creates a substantial talent lock-up. The deal team should evaluate whether these VPs' expertise can be acquired through market hiring before the non-competes expire, or whether the deal structure needs to include some form of retention incentive for them. The cost of hiring a VP of Engineering is significantly higher than a VP who's already on the team. The deal team needs to account for this in the total cost of acquisition.\n\nThird, and this is the most important one. The 'uncertainty about the acquisition' on Glassdoor. This is a real signal, not just noise. In acquisitions, the uncertainty is the deal's biggest risk. If the deal doesn't meet the expectations of the departing talent, they'll leave and the acquisition will suffer. The deal team needs to understand what those expectations are, and the talent team needs to understand the risks of meeting them. The deal team needs to know: what do the departing VPs and CTO expect from the new company? What will those expectations be? The acquisition team needs to have a plan for delivering on those expectations before the non-competes expire.\n\nThe pattern here is that the acquisition is being priced and structured around the departing workforce, not the future organization. The non-competes are being treated as the deal's primary cost driver, when the real cost is the uncertainty they're creating for the new team. The deal team needs to be asked: what do the departing talent expect from the new company? What will those expectations be? And what's the plan for delivering on them?",
+      "word_count": 409,
+      "tokens_generated": 513,
+      "time_seconds": 14.5,
+      "signal_score": 0.25,
+      "signals_found": [
+        "retention",
+        "non-compete"
+      ],
+      "signals_expected": [
+        "key person risk",
+        "retention",
+        "culture",
+        "overlap",
+        "earn-out",
+        "non-compete",
+        "integration",
+        "attrition"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "LS01",
+      "name": "LLM fine-tuning spike",
+      "category": "Live Signal Interpretation",
+      "knowledge_sub": "A",
+      "what_it_tests": "Does it evaluate base rates before reacting?",
+      "prompt": "The weekly skills tracking feed shows that 'LLM fine-tuning' mentions in our industry's job postings increased 200% quarter-over-quarter, from 15 to 45 postings. Is this something we should act on or just monitor?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "Monitor it closely, but don't act on the raw number. A 200% increase in posting mentions is statistically meaningful — it's not just 'more people looking at LLM fine-tuning.' But the actual talent demand is what matters, and that's a different story.\n\nBefore you respond, I need to understand what your actual situation is: Are you hiring for LLM fine-tuning specifically, or are you using LLM fine-tuning as a capability for broader AI roles? If you're hiring for a specific fine-tuning role, the talent pool is genuinely shrinking — you need candidates who know the technique, not just who can talk about it. If you're using fine-tuning as a generic AI capability, the demand is higher but more fragmented across different skills.\n\nAlso, what's your current capacity? Can you actually staff a team of 2-3 fine-tuning engineers with the skills needed? If the posting numbers are up but your team is down 40%, the solution isn't more postings — it's a capability gap that needs to be filled.\n\nThe real question is: what's the actual talent gap versus the posting noise?",
+      "word_count": 181,
+      "tokens_generated": 240,
+      "time_seconds": 6.8,
+      "signal_score": 0.17,
+      "signals_found": [
+        "monitor"
+      ],
+      "signals_expected": [
+        "base rate",
+        "small numbers",
+        "200% from low base",
+        "structural vs transient",
+        "who's posting",
+        "monitor"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "LS02",
+      "name": "Attrition spike interpretation",
+      "category": "Live Signal Interpretation",
+      "knowledge_sub": "A",
+      "what_it_tests": "Does it consider structural vs seasonal vs random variation?",
+      "prompt": "We just lost 4 senior engineers in the past 6 weeks. HR says attrition is spiking. Should we panic?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "Don't panic. Attrition spikes are almost always a signal, not a diagnosis. The spike itself tells you what happened, but it doesn't tell you why it happened. Before you launch any response, you need to do three things to make sense of this.",
+      "word_count": 43,
+      "tokens_generated": 54,
+      "time_seconds": 1.5,
+      "signal_score": 0.0,
+      "signals_found": [],
+      "signals_expected": [
+        "baseline",
+        "seasonal",
+        "exit interview",
+        "small sample",
+        "department",
+        "manager",
+        "pattern vs noise"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "LS03",
+      "name": "Glassdoor rating drop",
+      "category": "Live Signal Interpretation",
+      "knowledge_sub": "D",
+      "what_it_tests": "Does it question the signal quality of review platforms?",
+      "prompt": "Our Glassdoor rating dropped from 4.1 to 3.6 in two months. The VP of People wants to launch an urgent employer brand campaign. Is this the right response?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "Before I can give you a recommendation, I need to understand what's happening. A 0.5-point drop is small in absolute terms, but it's substantial relative to a 4.1 rating. Is there a specific event that triggered it? Did a recent change in leadership, a controversial decision, or a competitor announcement cause the dip? The cause matters enormously for the response.",
+      "word_count": 60,
+      "tokens_generated": 79,
+      "time_seconds": 2.2,
+      "signal_score": 0.0,
+      "signals_found": [],
+      "signals_expected": [
+        "sample size",
+        "recency",
+        "selection bias",
+        "disgruntled",
+        "trend vs snapshot",
+        "compare to",
+        "context"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "LF01",
+      "name": "Denver vs SLC analytics team",
+      "category": "Location Feasibility",
+      "knowledge_sub": "E",
+      "what_it_tests": "Does it structure a proper feasibility framework?",
+      "prompt": "We're considering opening a 30-person analytics team in Denver versus Salt Lake City. What should I be looking at to make this recommendation?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "Opening a 30-person analytics team is a significant capital investment — roughly 60,000 to 100,000 dollars in total cost depending on whether you're paying for salaries, benefits, or a hybrid model. Before committing that much, you need to answer three questions before looking at any numbers.\n\nFirst, what's the actual talent demand in each city? Analytics roles are competitive, but the intensity varies dramatically by metro. Denver has a growing tech and data analytics scene with a strong university presence (Colorado School of Mines, University of Denver), but it's not as saturated as San Francisco or Austin. Salt Lake City has a solid tech and analytics presence driven by the Big Tech ecosystem and the University of Utah, but the local talent pool is smaller than either Denver or Austin.\n\nSecond, what does the local infrastructure look like? Denver has a mature talent market with established job boards, a strong startup ecosystem, and a vibrant community of data professionals. Salt Lake City has the tech talent from the surrounding Utah valley but is more constrained by geographic and economic factors. If your team needs to work remotely, both cities have excellent infrastructure. If they need to commute, Denver offers more transit options and a larger city center.\n\nThird, what's your team's specific skill mix? Analytics teams are becoming increasingly specialized — some need SQL and Python, others need BI tools and visualization, some need data engineering, and some need business acumen. The talent mix required for a 30-person analytics team in Denver versus Salt Lake City may differ based on what those specific roles demand.\n\nOnce you have these three answers, you can look at the actual numbers. Denver's analytics job market typically shows 15-25% higher total compensation and 10-15% higher job posting volume compared to Salt Lake City. But the most important number for a 30-person team is your salary benchmark — what are the 30 highest-paid analytics professionals in each city, and what does that tell you about market saturation, compensation competitiveness, and retention challenges?",
+      "word_count": 337,
+      "tokens_generated": 425,
+      "time_seconds": 12.0,
+      "signal_score": 0.17,
+      "signals_found": [
+        "compensation"
+      ],
+      "signals_expected": [
+        "talent supply",
+        "competition",
+        "compensation",
+        "hiring velocity",
+        "risk factors",
+        "recommendation"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "LF02",
+      "name": "India GCC feasibility",
+      "category": "Location Feasibility",
+      "knowledge_sub": "A",
+      "what_it_tests": "Does it go beyond cost arbitrage to address real risks?",
+      "prompt": "Leadership wants to open a Global Capability Center in Bangalore for 100 engineers. They see the salary savings and want to move fast. What should I flag before they commit?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "Before you tell them the number, I need to know: what's your actual recommendation? If the answer is 'move forward but with some caveats,' tell me. If the answer is 'don't do it,' tell me. If the answer is 'it depends,' tell me what the conditions are.\n\nHere's what I'd flag in a 100-person Bangalore capability center:\n\nFirst, the talent quality question. Bangalore's engineering talent is excellent — it's the world's largest tech talent market. But it's also the most competitive. Your 100 engineers won't be able to compete with the pool of 200-300 engineers competing for the same roles. You'll need to either accept significantly lower quality, accept longer time-to-productivity, or accept a larger number of positions.\n\nSecond, the operational complexity. A capability center isn't just a warehouse of engineers. You need teams to build, maintain, and scale the capability. That means project management overhead, team coordination, tooling investment, and ongoing operational management. A capability center costs more than an individual engineer because it adds layers of complexity.\n\nThird, the talent development question. Engineers at a capability center are typically developing, not established. They need mentorship, career development, and clear progression paths. If you bring in 100 engineers who are being developed, you're investing in talent development ROI. If you bring in 100 engineers who are already established, you're creating a knowledge repository but not developing new talent.\n\nFourth, the geographic spread. Bangalore is only one city. A capability center in Bangalore means your engineers will all be in Bangalore. That's a geographic constraint. If you want to leverage Bangalore's talent while being geographically distributed, you need a second center.\n\nFifth, the cost question. The salary savings you're thinking of are real, but they're not the full picture. You'll need to budget for local infrastructure, local management overhead, local compliance costs, and local talent acquisition costs. The net benefit is usually smaller than the headline savings suggest.\n\nThe most important question I need before I can give you a recommendation: what's your actual goal? Are you building a capability to deliver products globally? Are you developing talent? Are you creating a competitive advantage in a specific technology area? The answer to that determines which of the above factors matters most.",
+      "word_count": 371,
+      "tokens_generated": 491,
+      "time_seconds": 13.8,
+      "signal_score": 0.29,
+      "signals_found": [
+        "management overhead",
+        "quality"
+      ],
+      "signals_expected": [
+        "attrition",
+        "competition",
+        "tier-1 vs tier-2",
+        "ramp time",
+        "management overhead",
+        "quality",
+        "cultural"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "LF03",
+      "name": "Nearshore vs offshore",
+      "category": "Location Feasibility",
+      "knowledge_sub": "E",
+      "what_it_tests": "Does it structure a multi-factor comparison?",
+      "prompt": "We're debating between opening a development center in Mexico City or expanding our existing team in Poland. How do I frame this comparison?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "Before I give you the comparison, I need to know: what's the business question behind this debate? Are you trying to expand total headcount, accelerate product delivery, or improve team productivity? And what does your current organization look like — a startup, a growing enterprise, or a mature company?\n\nThe answer depends entirely on which question you're asking. If your goal is total headcount, Mexico City is significantly more expensive per person than Poland. If your goal is product delivery speed, Mexico City has a larger talent pool and faster onboarding, which can be faster than building teams in Poland. If your goal is team productivity, the comparison is less clear — you need to measure productivity in both locations, not just headcount.\n\nI can give you the framework to answer this question, but the actual comparison needs to be built on specific data about both locations, not general market knowledge. What's your starting point?",
+      "word_count": 155,
+      "tokens_generated": 187,
+      "time_seconds": 5.3,
+      "signal_score": 0.0,
+      "signals_found": [],
+      "signals_expected": [
+        "time zone",
+        "cost",
+        "talent depth",
+        "attrition",
+        "IP protection",
+        "communication",
+        "trade-off"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "SM01",
+      "name": "CEO Miami bias",
+      "category": "Stakeholder Management",
+      "knowledge_sub": "F",
+      "what_it_tests": "Does it coach on HOW to deliver the message, not just data?",
+      "prompt": "Our CEO is convinced we should build our new engineering center in Miami because she went to a conference there and loved it. The talent data clearly favors other cities for our engineering profiles. How do I handle this?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "This is a classic case of executive bias versus data evidence. The CEO's preference is a valid personal preference, but in a competitive engineering market, it's a significant risk. Here's how to handle it constructively.\n\nStart by having a structured data-driven conversation with the CEO. Show her the actual talent market data — not just the aggregate, but the specific data relevant to her role. Pull data on engineering talent density by city for her profile, not the overall profile. Pull data on cost of living and housing costs for her profile. Pull data on remote work infrastructure and networking opportunities for her profile. Then show her the numbers, not the story.\n\nThe conversation will likely go something like this: 'I've looked at the engineering talent data for your profile, and Miami has X engineers per 10,000 residents compared to Y for your other options. The cost of living in Miami is Z dollars per month more than your other options. Your remote work infrastructure is W% better in Miami than in your other options. Here's the data, and I'd love to hear your perspective.'\n\nHer response will tell you more than any data source. If she says, 'But Miami has the best culture and networking opportunities,' then you've identified a valid differentiator that data alone can't capture. In that case, you might recommend a hybrid approach: build the center in Miami for culture and networking, but build a smaller satellite presence in a more data-competitive city like Austin or San Francisco for the actual engineering talent.\n\nThe goal is to make her more confident in her decision, not to make her change her mind. When executives make decisions based on data, they make better decisions. When they make decisions based on emotion, they make worse decisions. The CEO loves Miami because it's a city she likes — that's her data. But talent data is her business intelligence. Make sure she understands the distinction, and give her the tools to make decisions that balance both.",
+      "word_count": 335,
+      "tokens_generated": 403,
+      "time_seconds": 11.4,
+      "signal_score": 0.0,
+      "signals_found": [],
+      "signals_expected": [
+        "don't say she's wrong",
+        "frame the data",
+        "alternative framing",
+        "political awareness",
+        "present options",
+        "anchor"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "SM02",
+      "name": "Delivering bad comp news",
+      "category": "Stakeholder Management",
+      "knowledge_sub": "F",
+      "what_it_tests": "Does it frame the conversation strategically, not just factually?",
+      "prompt": "Our compensation analysis shows we're 20% below market for data science roles. The CFO has already said there's no budget for raises this year. How do I present this?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "This is one of the most common and painful situations in talent intelligence. The numbers are right — if you're 20% below market, and market means the median compensation for data scientists in your geography and role, then yes, you're below. But the CFO's constraint changes the entire conversation.\n\nHere's how to present this: don't present the raw compensation numbers. Present the story.\n\nStart by showing the market data you have. 'We've analyzed the market for data science roles in our geography and function. The median compensation for entry-level data scientists is $115K, and for senior roles it's $165K. Our current market position is 20% below both benchmarks. This is the objective reality of the talent market.'\n\nThen layer in the analysis that explains why. 'We've identified three factors contributing to this gap. First, there's a shortage of data scientists in our specific geography and function — we're not just 20% below, we're in the bottom quartile. Second, our compensation methodology doesn't fully account for the data science premium that our compensation survey methodology captures. Third, our current data science team has a composition that creates a compensation ceiling — we're hiring mostly mid-level and senior data scientists, and there's no entry-level data science talent available to fill the lower end of the compensation spectrum.'\n\nNow, pivot to the action plan that respects the CFO's constraints while delivering value. 'The budget constraint is real, but there are three ways to address this that don't require a budget increase. First, we're accelerating our data science talent acquisition pipeline — we've identified 12 data science roles that need to be filled in the next 90 days, and we're prioritizing these hires because they're the most critical for our business growth. Second, we're implementing a data science compensation standard that will raise our salaries by 15-20% to bring us into the market median, which will require a budget increase of $X. Third, we're repositioning our data science roles — we're moving some roles from senior to mid-level to make room for more junior hires, which improves our compensation positioning while reducing our compensation costs.'\n\nPresent the options, not the numbers. 'Option A: Immediate compensation adjustment to bring us into the market median. Requires $X budget. Timeline: 3-4 months. Impact: We'll be at market competitiveness, but we'll be 15-20% below market for entry-level roles. Option B: Strategic talent acquisition investment. Requires $Y budget. Timeline: 6-9 months. Impact: We'll be at market competitiveness with all roles, including entry-level. Option C: Repositioning and repositioning. Requires no budget. Timeline: 12 months. Impact: We'll be at market competitiveness with a stronger junior workforce composition and improved compensation positioning.'\n\nThen, make a recommendation based on what matters most to the CFO. 'For the CFO's purposes, Option C is the most sustainable — it requires no budget and delivers a long-term competitive advantage. However, if the CFO needs immediate competitiveness for strategic planning, Option B is the fastest path. If the CFO needs a quick win for their budget presentation, Option A is the most straightforward. Which of these options does the CFO need for their decision?'",
+      "word_count": 517,
+      "tokens_generated": 689,
+      "time_seconds": 19.5,
+      "signal_score": 0.38,
+      "signals_found": [
+        "options",
+        "cost",
+        "competitive"
+      ],
+      "signals_expected": [
+        "frame",
+        "options",
+        "cost",
+        "risk",
+        "retention",
+        "competitive",
+        "phased approach",
+        "don't lead with"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "SM03",
+      "name": "Hiring manager unrealistic timeline",
+      "category": "Stakeholder Management",
+      "knowledge_sub": "F",
+      "what_it_tests": "Does it help navigate the political dynamics?",
+      "prompt": "A hiring manager insists they need 10 senior ML engineers hired within 45 days. Market data says median time-to-fill for this role is 90+ days. How do I handle this without damaging the relationship?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "This is a classic situation where market data directly conflicts with hiring manager expectations, and the tension comes from how each side interprets the data.\n\nYour hiring manager needs 10 engineers in 45 days because of business pressure — they're worried about a gap in the team that will impact projects. Market data shows it's statistically unlikely to happen in 45 days because the 100 candidates who apply and 90 who get interviews don't all get offers in that timeframe. The gap between the two isn't a failure of either side — it's a mismatch of expectations.\n\nHere's how to handle it:\n\nFirst, acknowledge the hiring manager's urgency. Don't dismiss it — validate that they're under pressure. Then, explain the data with the right framing. 'Our historical data shows the median time-to-fill for senior ML engineers is 90+ days. That's because we have a healthy number of candidates competing for these roles, and the offer cycles are longer. We've been hiring 2-3 per month, and it takes about 3-4 months to get a candidate to offer. This means we can't deliver 10 in 45 days — it would require hiring 2-3 per week, which would require us to hire from outside our usual candidate pool and significantly increase our offer acceptance rate.\n\nThen offer an alternative that gets the business what they need without the unrealistic timeline. You could hire 2-3 senior ML engineers in 3-4 months, which is still on track for their business needs. Or you could hire 5-8 mid-level ML engineers in 6-8 months, which would build a stronger team for the next 18-24 months. Or you could adjust the scope — perhaps hire 10 ML engineers total, but across a 9-month timeline, with 2-3 per quarter.\n\nIf the hiring manager still insists on 10 in 45 days, you need to be transparent. 'I understand the business pressure. Based on our data, that timeline requires us to hire 2-3 per week from outside our usual pool, which would mean accepting offers from candidates we don't typically consider and having a higher acceptance rate. If we can do that, we can deliver. If not, we can deliver 2-3 in 3-4 months, which is still on track for your business needs.'\n\nThis approach protects the relationship because you're not being defensive or dismissive — you're being transparent about the data and offering a solution that respects their urgency while being honest about what's realistically possible.",
+      "word_count": 406,
+      "tokens_generated": 538,
+      "time_seconds": 15.2,
+      "signal_score": 0.43,
+      "signals_found": [
+        "expectation",
+        "data",
+        "what's realistic"
+      ],
+      "signals_expected": [
+        "expectation",
+        "trade-off",
+        "data",
+        "alternatives",
+        "partner",
+        "reframe",
+        "what's realistic"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "AO01",
+      "name": "Build always-on capability",
+      "category": "Always-On Intelligence",
+      "knowledge_sub": "G",
+      "what_it_tests": "Does it think in tiers, cadences, and delivery mechanisms?",
+      "prompt": "I've been doing ad-hoc talent intelligence projects for two years. My VP wants me to propose an 'always-on' intelligence capability. What should that look like?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "Three months from now, your proposal will be worth more than the ad-hoc work you've done in the last two years. Here's what an always-on intelligence capability looks like in practice.\n\nA talent intelligence capability is not a static dashboard or a weekly report. It's a continuous feedback loop that feeds into your decision-making at every level. Here's a practical architecture.\n\nAt the executive level, you'd have a quarterly talent intelligence briefing. This isn't a comprehensive market analysis — it's a concise update on what matters to your organization. Each quarter, you'd identify 3-5 critical talent trends that directly impact your business. For example: 'The supply of senior data engineers in our region has increased by 25% in the last six months, creating a 3-month supply window for our new analytics product. This is a competitive advantage if we launch product X in Q3, but it also means we need to prepare for potential labor shortages in Q4.' The briefing would be 15-20 minutes, delivered in person to the leadership team, with a one-page summary sent to everyone.\n\nAt the middle management level, you'd have monthly 'talent pulse' reports. These are shorter, more frequent updates that surface what's happening in the talent markets that affects their teams. Each month, you'd identify 2-3 talent market developments relevant to their teams and ask them to assess their readiness. For example: 'The entry-level developer market has cooled, which means your junior team is now more competitive than it was last year. What specific actions should your team take to maintain its competitive position?' These reports don't need to be comprehensive — they need to be timely and actionable.\n\nAt the team level, the intelligence capability should be embedded into the talent intelligence system you've been building. This means creating a weekly or bi-weekly talent intelligence newsletter for each team. These newsletters would include: 1) What talent market developments affect our team, 2) Who on our team is at risk of leaving (and why), 3) What skills our team needs to develop to stay competitive, and 4) What external talent market developments our team should watch for. The newsletter should be designed to be engaging enough that team members actually read it, not just skim it.\n\nAt the executive level, you'd also need a talent intelligence dashboard. This isn't a real-time data feed — it's a curated, visual representation of the intelligence that feeds into the quarterly and monthly briefings. The dashboard would show: talent supply and demand trends, competitor talent intelligence, critical talent risks, and competitive advantage indicators. It would be visualized with charts and trends, not raw data dumps.\n\nThe critical element that separates a talent intelligence capability from a talent intelligence project is the continuous feedback loop. Each output from the intelligence capability feeds into the next decision. The quarterly briefing informs your hiring strategy for the next quarter. The monthly talent pulse informs your team's planning and retention efforts. The weekly team newsletter informs your team's talent development priorities.\n\nThe initial investment — building the system, creating the reports, training the talent intelligence team — is substantial. But the ongoing value comes from the intelligence you continuously produce, which in turn drives better decisions at every level. The first quarter is about building the capability. The second quarter is about producing the output. The third quarter is about realizing the value.",
+      "word_count": 561,
+      "tokens_generated": 694,
+      "time_seconds": 19.6,
+      "signal_score": 0.44,
+      "signals_found": [
+        "weekly",
+        "monthly",
+        "quarterly",
+        "feedback loop"
+      ],
+      "signals_expected": [
+        "tiered",
+        "cadence",
+        "weekly",
+        "monthly",
+        "quarterly",
+        "field alerts",
+        "battlecards",
+        "feedback loop",
+        "capacity"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "AO02",
+      "name": "Dashboard design",
+      "category": "Always-On Intelligence",
+      "knowledge_sub": "G",
+      "what_it_tests": "Does it distinguish vanity metrics from actionable intelligence?",
+      "prompt": "HR wants me to build a 'talent intelligence dashboard.' They've listed 20 metrics they want to track. How should I approach this?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "Build it, but don't build for HR. Build it for the people who will use it. If the dashboard gets built and nobody touches it, it's a data warehouse with no eyes. If the dashboard is built for people who actually care about talent intelligence, it becomes a powerful tool for your organization.\n\nStart by mapping the stakeholders. Who will use this? The talent acquisition team? The HR business partner? The hiring manager? The executive leadership? The person who will be responsible for the dashboard? For each stakeholder, ask: what problem does this metric solve? Why does this metric matter to them? If a stakeholder doesn't understand why they need a metric, they won't engage with it, and the dashboard will become a vanity project.\n\nStart with the high-impact, low-complexity metrics. These are the ones you can calculate from existing data sources and provide value to stakeholders quickly. For example, if your hiring manager is frustrated that some roles are consistently filled slower than others, a 'time-to-fill' dashboard can give them a direct answer. If the talent acquisition team is concerned about diversity in their candidate pool, a 'diversity funnel' dashboard can show them where the pipeline is thin. These are the metrics that deliver immediate, tangible value.\n\nBuild the dashboard incrementally. Don't try to build 20 metrics and launch in a week. Build the top 5-7 high-impact metrics first. Get the stakeholders excited about those. Then, as you gain stakeholder buy-in and data familiarity, layer in the remaining metrics. This approach reduces the risk of building something nobody wants.\n\nFinally, make the dashboard accessible. If the dashboard is buried in a tool that requires a 15-minute login just to view the data, it won't be used. Embed the dashboard in tools your stakeholders already use—Slack channels, email reports, dashboards within their ATS, or even a simple Excel file they can access directly. The more accessible the dashboard, the more likely it will be used.",
+      "word_count": 325,
+      "tokens_generated": 417,
+      "time_seconds": 11.8,
+      "signal_score": 0.0,
+      "signals_found": [],
+      "signals_expected": [
+        "actionable",
+        "so what",
+        "decision",
+        "audience",
+        "cadence",
+        "threshold",
+        "alert",
+        "not just data"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "AO03",
+      "name": "Competitive intel cadence",
+      "category": "Always-On Intelligence",
+      "knowledge_sub": "G",
+      "what_it_tests": "Does it design a monitoring system, not just a one-time report?",
+      "prompt": "The Chief People Officer wants ongoing competitive intelligence on our top 5 talent competitors. How do I set this up sustainably as a team of one?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "A single person can build a sustainable competitive intelligence program, but it needs structure and boundaries. Here's how I'd structure it:\n\nFirst, define what 'top 5' means. Are these competitors in your same industry and geography? If not, the intelligence will be less useful. If they are, you need a list that's both accurate and actionable.\n\nSecond, establish a cadence. For most organizations, bi-weekly competitive intelligence briefings work. You don't need to spend 20 hours a week on this — 2-3 focused hours per week on data gathering and analysis is sufficient. The key is consistency.\n\nThird, create a data pipeline. As a single person, you need to do some of the data gathering yourself. This includes:\n- Monitoring job posting volume and growth patterns across your competitors' sites\n- Tracking compensation ranges and growth trends\n- Watching for job posting activity that correlates with actual hiring\n- Monitoring industry news and analyst reports that mention your competitors\n\nFourth, define your output format. A single person's intelligence shouldn't be a long report. It should be a weekly brief that includes:\n- What competitors are doing that you're not\n- Any talent market changes affecting your business\n- Specific recommendations for your competitive strategy\n- A checklist for what to monitor next week\n\nFifth, build relationships. Competitive intelligence is a relationship game. You need to know who the talent markets are, who the competitors are, and who the talent intelligence sources are. Build connections with recruiters, talent market analysts, and industry professionals who can provide your intelligence.\n\nThe key insight: your competitive intelligence team doesn't need to be as large as your business. It needs to be as lean as the intelligence it's producing. The goal is to get better competitive intelligence than your competitors' internal intelligence, not to be the largest intelligence team in the industry.",
+      "word_count": 306,
+      "tokens_generated": 384,
+      "time_seconds": 10.9,
+      "signal_score": 0.57,
+      "signals_found": [
+        "monitoring",
+        "cadence",
+        "sources",
+        "action"
+      ],
+      "signals_expected": [
+        "monitoring",
+        "triggers",
+        "cadence",
+        "sources",
+        "distribution",
+        "action",
+        "escalation"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "JD01",
+      "name": "Unicorn JD evaluation",
+      "category": "Job Description Analysis",
+      "knowledge_sub": "A",
+      "what_it_tests": "Does it show how each requirement shrinks the pool?",
+      "prompt": "Our hiring manager wrote a job description for a 'Senior Full-Stack AI Engineer' requiring React, Python, PyTorch, Kubernetes, 8+ years experience, and a PhD. Compensation range is $160-190K. Can you help me evaluate this against the market?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "This is a job description that is both aspirational and problematic — it combines a realistic-sounding senior requirement with a PhD and a $160-190K range that would put them in the top quartile of compensation for AI engineering roles, but the skill stack is narrower than the title suggests.\n\nLet me break down what's actually on the market for a Senior Full-Stack AI Engineer.\n\nFirst, the compensation: $160-190K for a Senior Full-Stack AI Engineer with an 8+ year experience is aggressive. For AI engineering specifically, which is a subset of full-stack, the market is more competitive. Senior AI engineers with PhDs are typically $180-220K, and even those without PhDs in this role often command $170-200K. At $160-190K, you're pricing this role at the lower end of what the market is actually paying for. If you're paying $160K and you're targeting 10% of the market, you risk significant competition from qualified candidates. If you pay $190K, you're positioning for the top tier where demand is highest.\n\nSecond, the skill stack is more constrained than the title implies. A true 'Senior Full-Stack AI Engineer' typically needs:\n- Deep AI/ML competency (PyTorch, TensorFlow, model architecture, training, deployment)\n- Full-stack development (React, Node.js, backend, database, deployment)\n- Cloud infrastructure (Kubernetes, AWS/Azure/GCP)\n- Strong system design and engineering judgment\n\nThe JD mentions all of these, which is good. But the '8+ years experience' requirement is the most restrictive element. In the AI engineering space, 8+ years is actually quite conservative. Many companies hire 6-8 year experience engineers who have done AI work and are now applying for traditional full-stack senior roles. The AI skills are what differentiate them, not the 8 years.\n\nThird, the PhD requirement. While it's one of the most competitive requirements in the market, it's not a dealbreaker for many candidates. About 40-50% of Senior AI Engineer positions don't require a PhD, and those that do are still competitive. The market is shifting toward experience over degrees, especially for roles where the skills can be demonstrated through portfolio and project work rather than academic credentials.\n\nWhat I'd recommend:\n\n1. Adjust the compensation to reflect market reality. $185-195K for this specific skill stack, with a range of $175-215K, would be more competitive and attract the right talent while maintaining the senior-level positioning.\n\n2. Consider whether the PhD requirement can be removed or relaxed. If you're willing to accept candidates without PhDs, you'll significantly expand your candidate pool. The AI skills are more important than the degree.\n\n3. Make the experience requirement more flexible. Instead of 8+ years, consider 5-8 years. The AI skills are what matter, and many qualified candidates have 5-7 years of experience.\n\n4. Add a skills-based requirement rather than a list of technologies. Instead of requiring specific tech stack, ask for experience with at least 3-4 major AI/ML frameworks and cloud deployment. This allows for more candidates while maintaining quality.\n\n5. Consider whether this is the right seniority level. If you're filling this role, ask yourself: do you need someone who has already built production AI systems, or do you need someone who will build them? If the latter, the experience requirement might be too high.",
+      "word_count": 526,
+      "tokens_generated": 764,
+      "time_seconds": 21.6,
+      "signal_score": 0.0,
+      "signals_found": [],
+      "signals_expected": [
+        "each requirement narrows",
+        "pool size",
+        "intersection",
+        "compensation mismatch",
+        "must-have vs nice-to-have",
+        "unicorn"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "JD02",
+      "name": "Comp band too wide",
+      "category": "Job Description Analysis",
+      "knowledge_sub": "B",
+      "what_it_tests": "Does it diagnose the structural problem with wide bands?",
+      "prompt": "We have a single salary band of $120K-$200K for all 'Senior Engineer' roles regardless of specialization. Is this a problem?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "Yes, this is a significant problem that will create cascading issues. You need to decompose the senior engineer category into meaningful sub-groups because $120K-$200K is too broad to support.\n\nStart by breaking down senior engineers by specialization: software engineering, data engineering, data science, machine learning, and embedded systems. Each of these has fundamentally different market conditions, compensation benchmarks, and career progression patterns. Software engineering senior engineers typically earn $180K-$250K in most tech markets. Embedded systems senior engineers often earn $160K-$220K. Data science senior engineers typically earn $170K-$240K. Machine learning senior engineers may have significantly higher compensation depending on the company's ML capabilities.\n\nThe problem is that if you have a single band for all of these, you'll be paying below the market rate for some specializations and above the market rate for others. This creates two major problems: first, your pay offers for the overpaid specializations will be rejected by candidates who are actually looking at the market rate for their specific specialization, and second, your pay offers for the underpaid specializations will create a hiring problem where candidates are actually getting more than they're willing to pay.\n\nTo fix this, you need to either create separate salary bands for each specialization within the senior category, or use a tiered approach where you offer the band's minimum to the highest value specialization and adjust the band's maximum accordingly. The key is that compensation structure must be aligned with the actual market reality of each role, not a generic template.",
+      "word_count": 249,
+      "tokens_generated": 331,
+      "time_seconds": 9.4,
+      "signal_score": 0.14,
+      "signals_found": [
+        "market rate"
+      ],
+      "signals_expected": [
+        "too wide",
+        "different roles",
+        "equity",
+        "internal compression",
+        "retention risk",
+        "market rate",
+        "split"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "JD03",
+      "name": "Equity vs base trade-off",
+      "category": "Job Description Analysis",
+      "knowledge_sub": "B",
+      "what_it_tests": "Does it analyze the comp structure, not just the number?",
+      "prompt": "A startup is offering our senior engineer candidate $140K base plus $200K in stock options over 4 years. We're offering $185K base with no equity. They say the startup offer is worth more. How do I evaluate this?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "This is one of the most common and hardest comparisons in talent intelligence. You need to convert both offers into comparable terms before you can reason about which one is actually better for the candidate.\n\nFirst, let's normalize the compensation. Base salary is straightforward: $185K vs $140K is a $45K higher guaranteed income. That's immediate and certain.\n\nBut the stock options complicate things. The total compensation value is $185K + (stock options value). The stock options value depends on the strike price, exercise price, vesting schedule, and market conditions at exercise. Without knowing these details, you can't quantify the option value.\n\nWhat I need to evaluate this properly:\n1. What's the stock option plan? Exercise price, vesting schedule, and whether it's all-set or has a cliff.\n2. What's the market value of the stock at the time of offer?\n3. What's the company's valuation trajectory? If the company is growing 10-20% per year for the next 4 years, the stock value could be $500K-$1M+ at exercise.\n4. What's the probability of the company being acquired or going public? If there's a 40% chance of an acquisition in 2 years, the stock could be worth $10M+ at exercise.\n\nIf the stock plan is all-set immediately, the option value could be substantial. If it's 4-year vesting, the option value is spread over time and might not be realized in the first year. If the company is a startup, the valuation is unknown and could be wildly different from a larger company.\n\nThe question becomes: does the $45K base difference plus the potential stock upside justify the $45K base premium? If the stock plan is realizable and the company is growing, the total package could be worth $230K-$280K. If the stock plan is delayed, not exercisable for a long time, or the company is not growing, the total package might be closer to $200K-$210K.\n\nThe answer depends entirely on what's actually in the option plan and the company's trajectory. The base salary difference is real, but the option value is speculative and contingent on multiple factors.",
+      "word_count": 343,
+      "tokens_generated": 488,
+      "time_seconds": 13.8,
+      "signal_score": 0.29,
+      "signals_found": [
+        "vesting",
+        "total comp"
+      ],
+      "signals_expected": [
+        "equity",
+        "vesting",
+        "cash vs stock",
+        "stage of company",
+        "risk profile",
+        "total comp",
+        "liquid vs illiquid"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "FL01",
+      "name": "Data engineering 2028",
+      "category": "Forward-Looking",
+      "knowledge_sub": "E",
+      "what_it_tests": "Does it build scenarios rather than point predictions?",
+      "prompt": "What will the data engineering talent market look like in 2028? We need to plan our hiring strategy.",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "The data engineering talent market in 2028 will be more specialized than it is today. Here's what I expect and why:\n\n**Specialization will intensify.** What's possible in 2023 (building data pipelines in SQL, writing some Python) will become the baseline. The differentiators in 2028 will be: who can architect scalable systems at scale, who understands modern data infrastructure patterns, who can build self-service data platforms, and who understands the operational realities of data engineering — including reliability, cost, and performance under load. We'll see a sharp concentration of talent in specific domains: real-time streaming platforms, batch processing at massive scale, lakehouse architectures, and data engineering operations.\n\n**The skills gap will widen between data engineering and data analytics.** Today, a data engineer and a data analyst often do the same work. In 2028, that gap will close. Analytics professionals will need data engineering skills to build their data infrastructure. Data engineers will need analytics skills to communicate with business stakeholders and manage their teams. The boundary between them will blur, requiring professionals who understand both the engineering and the business value of data.\n\n**Data engineering operations will become more important.** As data systems get more complex and critical to business operations, the ability to manage, monitor, and operate data engineering infrastructure will become as important as the engineering work itself. We'll see more demand for data engineering operations professionals who can build, monitor, and maintain data infrastructure teams.\n\n**Cloud-native specialization will drive demand.** The skills that matter most will be cloud-native data engineering skills: AWS, Azure, or GCP specific data engineering expertise. The ability to build data engineering solutions that leverage cloud-native services — serverless data processing, managed data lakes, cloud-native analytics platforms — will be a significant advantage.\n\n**The talent market will become more segmented.** Talent pools will split into different skill categories that are harder to cross-train into. A data engineer who specializes in one cloud platform and one data modeling pattern may never find a job in another category. This segmentation means companies need to develop their own internal talent pipelines rather than relying solely on external hiring.\n\n**The demand for data engineering will outpace the supply.** This will be a persistent trend. The number of companies adopting data-driven decision-making will grow, but the number of people who can build and operate data infrastructure at scale will grow more slowly. This supply-demand imbalance will be one of the biggest drivers of talent market dynamics in the next decade.\n\n**The most valuable data engineering skills in 2028 will be:** architecture and design, system reliability and monitoring, cloud-native platform development, and business operations. Technical implementation skills that are generic will be less valuable than skills that combine engineering expertise with business understanding and operational awareness.\n\nThe strategic implication: your data engineering hiring strategy in 2028 should focus on building depth in these specialized skills rather than breadth. Instead of trying to hire 50 general data engineers, invest in developing 5-10 people who can architect, build, and operate modern data infrastructure at scale.",
+      "word_count": 502,
+      "tokens_generated": 636,
+      "time_seconds": 18.0,
+      "signal_score": 0.0,
+      "signals_found": [],
+      "signals_expected": [
+        "scenario",
+        "can't predict",
+        "structural forces",
+        "uncertain",
+        "leading indicators",
+        "monitor for"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "FL02",
+      "name": "AI impact on workforce size",
+      "category": "Forward-Looking",
+      "knowledge_sub": "E",
+      "what_it_tests": "Does it resist giving a definitive number?",
+      "prompt": "How many fewer people will we need in 3 years because of AI? Give me a number.",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "I can't give you a specific number. Any number I'd provide would be either wildly optimistic or wildly pessimistic, and both would be misleading. AI automation will affect specific job types and specific companies, not the entire workforce in a uniform way.\n\nWhat I can tell you instead is that most credible analysts — McKinsey, BCG, Gartner, and various labor market researchers — agree that AI automation will reduce the total number of jobs by somewhere in the range of 30-50 million across the developed world over the next decade. But this is a reduction in the total count, not a uniform reduction. The jobs most at risk are in content creation, routine data processing, customer service, and some administrative roles. Jobs most protected are in advanced reasoning, complex problem solving, emotional intelligence, and creative work that requires human judgment.\n\nThe more useful question is not 'how many fewer people' but 'which jobs and which companies'. A specific company's exposure to AI automation depends on what it does and how it's structured. A company that's heavily reliant on routine customer service and data processing will face significant automation. A company that's deeply embedded in a complex, unpredictable environment where human judgment is essential will be less affected.",
+      "word_count": 207,
+      "tokens_generated": 252,
+      "time_seconds": 7.1,
+      "signal_score": 0.14,
+      "signals_found": [
+        "depends"
+      ],
+      "signals_expected": [
+        "depends",
+        "which roles",
+        "augment vs replace",
+        "timeline",
+        "scenario",
+        "uncertainty",
+        "adjacent roles"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "FL03",
+      "name": "Skills taxonomy future-proofing",
+      "category": "Forward-Looking",
+      "knowledge_sub": "E",
+      "what_it_tests": "Does it address the limitations of static skill models?",
+      "prompt": "We want to build a skills taxonomy that will be valid for the next 5 years. What should we know before investing in this?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "Before you spend a single dollar on taxonomy development, you need to answer three foundational questions.\n\n1. What's your starting point, and what's your end point? A taxonomy is not a static list. If you build it today to last 5 years, you're assuming that the world will look the same in 5 years. If the AI landscape shifts dramatically, your taxonomy will become obsolete in 18 months. Your starting point should be your current skills inventory and your end point should be your 5-year vision — not the two extremes. A taxonomy that bridges them is more valuable than one that matches either perfectly.\n\n2. Who owns it, and what's the governance model? A skills taxonomy is an organizational asset. It requires a governance structure — a team responsible for ownership, a process for keeping it updated, and a mechanism for accountability. Without a clear owner and a clear update cadence, your taxonomy will drift from relevance and become a static artifact that no one actually uses.\n\n3. What's the trade-off you're willing to accept? Every skills taxonomy has a cost — time to build, cost to maintain, cost to use. What's the minimum viable version you can launch in 3 months, and what's the version you want to be able to reach in 3 years? Don't aim for perfection from day one. Launch a working version that's accurate enough for your immediate use case, then iterate.",
+      "word_count": 238,
+      "tokens_generated": 293,
+      "time_seconds": 8.3,
+      "signal_score": 0.14,
+      "signals_found": [
+        "update cadence"
+      ],
+      "signals_expected": [
+        "half-life",
+        "evolving",
+        "adjacent skills",
+        "capability",
+        "not static",
+        "update cadence",
+        "proxy"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "CT01",
+      "name": "TTF increase for CFO",
+      "category": "Commercial Translation",
+      "knowledge_sub": "F",
+      "what_it_tests": "Does it translate to dollars and business impact?",
+      "prompt": "Our time-to-fill for senior engineers has increased from 55 to 90 days over the past year. How should I present this to our CFO?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "Let me give you the honest answer first: your time-to-fill has increased by 64%, which is statistically significant. The good news is that it's not a crisis yet — the market has shifted. The bad news is that this shift will accelerate if it continues. Here's how to present it to your CFO without triggering an immediate panic response.\n\nFirst, frame it as a market change, not a team failure. 'The market for senior engineering talent has changed significantly. The supply of candidates who can deliver on our specific requirements has narrowed. This is a market intelligence update, not a performance review.'\n\nSecond, show the data context. Compare your 55-day average from 12 months ago with your 90-day average now. Show the percentage change. Then show the total number of hires affected. If you had 200 senior engineer hires in 12 months and 130 of them took longer than 60 days, that's 65% of your pipeline affected. That's a 65% increase in hiring duration.\n\nThird, show the cost impact. If your average cost per senior engineer hire is $120,000, a 65% increase in duration means $78,000 more cost per hire. If you have 130 affected hires, that's $10.14 million in additional costs. That's a $10.14 million increase in hiring expenses over 12 months.\n\nFourth, show the strategic impact. 'This change means our ability to respond to talent needs is slower. We're no longer able to meet demand at our previous speed. This requires either increasing our compensation to attract faster hires, expanding our recruiting budget, or developing more internal talent pipelines. The cost of inaction is that we'll need to hire more people at higher costs to maintain our hiring velocity.'\n\nFifth, present the solution options with trade-offs. 'We have three options: 1) Increase our recruiting budget by X% to improve candidate quality and speed. 2) Increase compensation by Y% to attract faster candidates. 3) Expand our internal talent development program to build a deeper pool of internal candidates. Each option has different costs and timeframes. Option 1 costs $X annually and takes 6-9 months to implement. Option 2 costs $Y annually and takes 4-6 months. Option 3 costs Z internally and takes 6-12 months.'\n\nFinally, end with a forward-looking statement. 'This market intelligence update is based on data from our recruiting platform and external talent market signals. We're seeing a trend of increasing time-to-fill for senior positions across multiple industries. Our recommendation is to monitor this trend quarterly and adjust our strategy accordingly.'\n\nThe CFO will understand this is a market reality, not a performance issue. They'll see the numbers, the financial impact, and the strategic implications. They'll make the decision they need to make — whether it's approving a budget increase, reallocating resources, or taking action internally. The presentation makes the decision easy because it frames the problem clearly and provides the options needed to solve it.",
+      "word_count": 479,
+      "tokens_generated": 653,
+      "time_seconds": 18.5,
+      "signal_score": 0.14,
+      "signals_found": [
+        "budget"
+      ],
+      "signals_expected": [
+        "dollar",
+        "cost of vacancy",
+        "revenue delay",
+        "budget",
+        "CFO language",
+        "ROI",
+        "options with costs"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "CT02",
+      "name": "Retention cost modeling",
+      "category": "Commercial Translation",
+      "knowledge_sub": "B",
+      "what_it_tests": "Does it quantify the business case for retention investment?",
+      "prompt": "Engineering turnover is at 18%. The CHRO wants to propose a $2M retention package to the board. How do I build the business case?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "Before I can help you build the business case, I need to understand what the 18% represents and why it's happening. Is this across all engineering roles or just senior-level? Are you seeing it as a trend or a spike? What's the specific reason — is it compensation, workload, role clarity, or something else?",
+      "word_count": 54,
+      "tokens_generated": 69,
+      "time_seconds": 2.0,
+      "signal_score": 0.0,
+      "signals_found": [],
+      "signals_expected": [
+        "replacement cost",
+        "productivity ramp",
+        "institutional knowledge",
+        "1.5x to 2x",
+        "revenue impact",
+        "team disruption"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "CT03",
+      "name": "TI ROI justification",
+      "category": "Commercial Translation",
+      "knowledge_sub": "F",
+      "what_it_tests": "Does it frame TI value in business terms, not HR terms?",
+      "prompt": "My VP asked me to justify the cost of our talent intelligence function. What's the framework for demonstrating ROI?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "The VP wants a business case, not a marketing brochure. Here's the framework that actually works in practice.\n\nStart with the cost structure. What does your talent intelligence function cost? If it's just consultants hired quarterly for 2 weeks, it's probably $150K-$250K annually. If you're paying for a platform subscription plus consultants, it could be $500K+. That's not a huge expense for most companies, so the cost justification is straightforward: 'Our cost is $200K, and we need to show why that investment pays for itself.'\n\nBut the real ROI story comes from the outputs. For each output, quantify the business value. \n\nOne output is 'market intelligence that reduces hiring waste.' If your function identifies that a company you're considering hiring from has a compensation level 15% higher than market, and you avoid a $300K offer, that's $300K saved per hire. If you're hiring 200 people annually, that's $60M in avoided compensation. But that's a gross number. You need to adjust for the fact that you're not hiring 200 people — you're probably hiring 15-20 per year. So the real number is $10-15M annually. That's the kind of number that makes a VP care.\n\nAnother output is 'candidate quality filtering.' If your intelligence function identifies that 60% of your candidate pool is not qualified based on the job requirements, and you can filter out 40% of them before interview, you're saving 24% of your interview costs. Interview costs average $25K per candidate. Saving 24% on 100 interviews saves $600K annually. Again, that's a solid, defensible number.\n\nThe third output is 'market awareness and strategic alignment.' Your talent intelligence function tells your VP which markets are growing, which skills are becoming critical, and what the competitive landscape looks like. If your VP uses that intelligence to make strategic decisions that prevent costly mistakes — like entering a market where the competitor has a 10-year lead, or pivoting your strategy based on emerging talent trends — the ROI is harder to quantify but is fundamentally valuable. It's about risk reduction and strategic clarity.\n\nHere's the framework: Present the cost, then present three or four output-based ROI numbers that you can actually demonstrate, and finally present the strategic value — the ability to make better decisions and reduce risk. The goal is to make the VP understand that the talent intelligence function isn't a cost center; it's a business enabler that directly contributes to revenue and risk reduction.\n\nThe hardest part is the first number: the cost. Be honest about it. If it's $200K, that's not a lot. If it's $2M, that's a meaningful investment. The second part is the outputs — be specific about what you do and what value you deliver. The third part is the strategic value — make it about risk reduction and strategic clarity, not about 'insight for insight's sake.'",
+      "word_count": 471,
+      "tokens_generated": 651,
+      "time_seconds": 18.5,
+      "signal_score": 0.17,
+      "signals_found": [
+        "risk reduction"
+      ],
+      "signals_expected": [
+        "avoided cost",
+        "speed",
+        "quality of hire",
+        "risk reduction",
+        "decision quality",
+        "concrete example"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "DQ01",
+      "name": "Vague hiring request",
+      "category": "Diagnostic Questioning",
+      "knowledge_sub": "D",
+      "what_it_tests": "Does it ask scoping questions BEFORE providing analysis?",
+      "prompt": "We need to hire more engineers. Can you help?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "Can you share a bit more about your situation? What's the engineering gap you're facing? Are you struggling to find talent, or are you running out of options? What's your budget, and what's your timeline? And what kind of engineers are you most in need of?",
+      "word_count": 46,
+      "tokens_generated": 58,
+      "time_seconds": 1.7,
+      "signal_score": 0.22,
+      "signals_found": [
+        "budget",
+        "?"
+      ],
+      "signals_expected": [
+        "what role",
+        "how many",
+        "when",
+        "where",
+        "budget",
+        "what's driving",
+        "before I can",
+        "question",
+        "?"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "DQ02",
+      "name": "Ambiguous comp request",
+      "category": "Diagnostic Questioning",
+      "knowledge_sub": "G",
+      "what_it_tests": "Does it diagnose what they actually need before answering?",
+      "prompt": "Can you pull some comp data for us?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "Absolutely — what would you need? A specific role and location, or are you looking at a broader market trend? And what's your use case — are you benchmarking internal offers, evaluating candidates, or doing strategic workforce planning?",
+      "word_count": 38,
+      "tokens_generated": 47,
+      "time_seconds": 1.3,
+      "signal_score": 0.14,
+      "signals_found": [
+        "?"
+      ],
+      "signals_expected": [
+        "which roles",
+        "what market",
+        "base or total",
+        "what decision",
+        "benchmark against",
+        "question",
+        "?"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "DQ03",
+      "name": "Talent mapping request",
+      "category": "Diagnostic Questioning",
+      "knowledge_sub": "D",
+      "what_it_tests": "Does it ask what the map is for before building it?",
+      "prompt": "We need a talent map for our product team.",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "What do you mean by 'product team'? Is this a cross-functional group that includes engineers, designers, product managers, and possibly QA? How many people are on it, and what's the typical seniority distribution?",
+      "word_count": 33,
+      "tokens_generated": 45,
+      "time_seconds": 1.3,
+      "signal_score": 0.25,
+      "signals_found": [
+        "seniority",
+        "?"
+      ],
+      "signals_expected": [
+        "purpose",
+        "what decision",
+        "scope",
+        "geography",
+        "seniority",
+        "timeline",
+        "question",
+        "?"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "DQ04",
+      "name": "Board deck data request",
+      "category": "Diagnostic Questioning",
+      "knowledge_sub": "G",
+      "what_it_tests": "Does it ask about audience and goal before pulling data?",
+      "prompt": "I need talent data for the board deck next week.",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "What's the board's question? Are you trying to justify hiring a specific role, evaluate a competitor's market, or set strategic hiring goals? The answer to that will determine which data you pull and how you frame it.",
+      "word_count": 37,
+      "tokens_generated": 46,
+      "time_seconds": 1.3,
+      "signal_score": 0.29,
+      "signals_found": [
+        "question",
+        "?"
+      ],
+      "signals_expected": [
+        "audience",
+        "what story",
+        "what decision",
+        "context",
+        "what have you shown before",
+        "question",
+        "?"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "EC01",
+      "name": "Predict competitor hiring",
+      "category": "Epistemic Calibration",
+      "knowledge_sub": "D",
+      "what_it_tests": "Does it admit it can't predict and suggest indicators instead?",
+      "prompt": "Will our competitors hire more or fewer engineers next year?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "I can't predict competitor hiring without knowing who they are, what their strategy is, and what they're hiring for. The answer depends entirely on their competitive position. If they're a market leader with strong product-market fit, they're likely to hire aggressively. If they're a niche player facing headwinds, they might be hiring selectively. If they're a follower, they're likely watching your hiring trends closely and reacting. What are the three competitors you're most concerned about, and what's your competitive positioning relative to them?",
+      "word_count": 83,
+      "tokens_generated": 108,
+      "time_seconds": 3.1,
+      "signal_score": 0.14,
+      "signals_found": [
+        "can't predict"
+      ],
+      "signals_expected": [
+        "can't predict",
+        "don't know",
+        "uncertain",
+        "impossible",
+        "however",
+        "leading indicators",
+        "watch for"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "EC02",
+      "name": "Exact salary for role",
+      "category": "Epistemic Calibration",
+      "knowledge_sub": "D",
+      "what_it_tests": "Does it provide a range with appropriate caveats?",
+      "prompt": "What's the exact salary for a senior data scientist?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "You can't give me an exact number without knowing your location, the specific company, the industry, and the exact title and experience level. A senior data scientist in New York City at Google in 2024 makes a different salary than one at a mid-sized firm in Texas in 2024, and there's significant variation based on whether you're in the core city, a metro area, or a smaller market. The range is roughly $120,000 to $180,000, but that's a range, not an exact figure. What I can tell you is that the average senior data scientist salary in the US is approximately $130,000 to $150,000, depending heavily on the factors I mentioned. If you tell me your location, company type, and specific role, I can give you a much tighter range.",
+      "word_count": 130,
+      "tokens_generated": 189,
+      "time_seconds": 5.3,
+      "signal_score": 0.5,
+      "signals_found": [
+        "range",
+        "location",
+        "experience",
+        "approximate"
+      ],
+      "signals_expected": [
+        "range",
+        "depends",
+        "location",
+        "experience",
+        "total comp",
+        "approximate",
+        "varies",
+        "without more context"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "EC03",
+      "name": "Whether to offshore",
+      "category": "Epistemic Calibration",
+      "knowledge_sub": "D",
+      "what_it_tests": "Does it refuse to give a simple yes/no and explain why?",
+      "prompt": "Should we offshore our QA team? Yes or no?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "No. Not for a QA function.\n\nQA is a function of quality, not of geography. The skills you need — understanding requirements, testing edge cases, writing maintainable tests, collaborating with developers, managing test planning, and ensuring quality across distributed teams — are not skills that move with borders. They move with companies. The companies that offshore QA are usually doing it because they need to reduce cost, not because QA is a geography-dependent skill.\n\nIf your QA function is producing consistent, reliable results, keeping it in-house gives you visibility into the quality of your output. You can measure QA effectiveness against the actual quality of the software you deliver. Offshoring removes that measurement capability.\n\nIf your QA function is underperforming or inconsistent, the solution is not to move the function. The solution is to invest in the function — better tools, better processes, better training, better leadership. Those investments work regardless of whether you're in-house or offshoring.\n\nThe only time offshore QA makes sense is if your QA function is so underperforming that it's costing you more than the offshore option. Even then, the offshore function should be a subset of QA that does specific, low-skill tasks, while the in-house function handles the strategic, complex, and high-quality work. The hybrid approach is almost always better than either extreme.",
+      "word_count": 218,
+      "tokens_generated": 274,
+      "time_seconds": 7.8,
+      "signal_score": 0.0,
+      "signals_found": [],
+      "signals_expected": [
+        "depends",
+        "trade-off",
+        "factors",
+        "context needed",
+        "not a simple",
+        "risk",
+        "what are you optimizing"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "BV01",
+      "name": "Simple definition",
+      "category": "Brevity",
+      "knowledge_sub": "A",
+      "what_it_tests": "Does it give a concise answer to a simple question?",
+      "prompt": "What does TI stand for in talent intelligence?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "It's a common abbreviation. In talent intelligence, it most often means Talent Intelligence, which is the discipline of using data, analytics, and analytical methods to understand the workforce landscape.",
+      "word_count": 29,
+      "tokens_generated": 37,
+      "time_seconds": 1.1,
+      "signal_score": 0,
+      "signals_found": [],
+      "signals_expected": [],
+      "brevity_target": 150,
+      "brevity_pass": true,
+      "has_think_tag": false
+    },
+    {
+      "id": "BV02",
+      "name": "Quick feasibility check",
+      "category": "Brevity",
+      "knowledge_sub": "A",
+      "what_it_tests": "Does it lead with a direct answer?",
+      "prompt": "Can we hire 5 data engineers in Austin in 3 months?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "That's ambitious and worth pursuing, but here's what I'd advise before committing to it. Austin is one of the most data-intense cities in the country — Austin data center growth, the influx of data companies, and the concentration of data engineering talent make it an attractive place to hire. But 5 engineers in 3 months is a very tight timeline, and the success depends entirely on how you execute.\n\nThe core challenge is that data engineering is a specialized discipline. You need people with specific skills: data modeling, SQL, Python/Scala, cloud platform expertise (AWS, GCP, Azure), and the ability to work in distributed systems. Hiring 5 people who all have these skills in 90 days is extremely difficult. The typical data engineering pipeline takes 6-12 months to build a solid team.\n\nYour realistic strategy would be: hire 2-3 strong candidates in 6-8 weeks, then hire 2-3 more candidates over the next 2-3 months. This gives you a functional team with 3-4 engineers who can hit the ground running, while you simultaneously hire a 5th person to scale. This phased approach reduces your hiring risk and lets you build momentum before you need the full team.\n\nAlso, consider whether 5 engineers is the right number for your specific needs. If your team is small, 3-4 might be more realistic. If your project is complex and you need distributed systems capabilities, 5 might be appropriate. The right number depends on your project scope, not on a generic talent market target.\n\nWhat's your specific project or need? That will tell me whether 5 engineers is actually the right number, and how to execute this timeline.",
+      "word_count": 272,
+      "tokens_generated": 354,
+      "time_seconds": 10.0,
+      "signal_score": 0.4,
+      "signals_found": [
+        "no",
+        "depends"
+      ],
+      "signals_expected": [
+        "yes",
+        "no",
+        "depends",
+        "likely",
+        "unlikely"
+      ],
+      "brevity_target": 250,
+      "brevity_pass": false,
+      "has_think_tag": false
+    },
+    {
+      "id": "SW01",
+      "name": "TI prompt activates domain",
+      "category": "Switching",
+      "knowledge_sub": "A",
+      "what_it_tests": "With TI system prompt, does it respond as a TI analyst?",
+      "prompt": "We need to grow our team by 20 people next year. Where should we start?",
+      "system_used": "You are an experienced talent market intelligence analyst sp...",
+      "response": "Start with the data. Before you talk to anyone about hiring, here's what you need to know: What are your 20 new hires going to do? Are they all the same role? If you're filling 20 identical roles, you're not growing your team — you're replacing people. You need to know whether these 20 positions are new roles you need to create, or roles you're trying to fill with people you don't need. If it's the former, your growth plan includes building the function, not just hiring people. If it's the latter, you need a hiring strategy that makes sense for your organization's capacity and culture.",
+      "word_count": 106,
+      "tokens_generated": 136,
+      "time_seconds": 3.8,
+      "signal_score": 0.25,
+      "signals_found": [
+        "data",
+        "hiring"
+      ],
+      "signals_expected": [
+        "talent",
+        "market",
+        "data",
+        "hiring",
+        "compensation",
+        "competitor",
+        "pipeline",
+        "supply"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "SW02",
+      "name": "General prompt stays general",
+      "category": "Switching",
+      "knowledge_sub": "A",
+      "what_it_tests": "With general prompt, does it NOT default to TI framing?",
+      "prompt": "We need to grow our team by 20 people next year. Where should we start?",
+      "system_used": "You are a helpful assistant. Think carefully before respondi...",
+      "response": "Start with recruitment channels and a strategic plan, not just filling a number.\n\n1. **Define the roles** – what positions are needed and in what numbers?\n2. **Build the channels** – which employers are most likely to hire in your industry and region?\n3. **Set the budget** – how much will it cost to attract, hire, and onboard the 20 new people?\n4. **Plan the onboarding** – what will you do to make sure they become productive quickly?\n5. **Consider a pipeline** – can you start recruiting for these roles now so you're ready when the first new hire arrives?",
+      "word_count": 100,
+      "tokens_generated": 134,
+      "time_seconds": 3.8,
+      "signal_score": 0,
+      "signals_found": [],
+      "signals_expected": [],
+      "anti_signals_found": [],
+      "switching_pass": true,
+      "has_think_tag": false
+    },
+    {
+      "id": "GK01",
+      "name": "Medical knowledge preserved",
+      "category": "General Knowledge",
+      "knowledge_sub": null,
+      "what_it_tests": "Did fine-tuning damage general knowledge?",
+      "prompt": "Should I take antibiotics for a cold?",
+      "system_used": "You are a helpful assistant. Think carefully before respondi...",
+      "response": "No — taking antibiotics for a cold is not only ineffective; it can also be harmful. Antibiotics only treat bacterial infections. Most colds are viral, and antibiotics don't work on viruses. In fact, using antibiotics for a cold can lead to:\n\n- **Antibiotic resistance**: Overuse in humans and animals contributes to the development of resistant bacteria, making future infections harder to treat.\n- **Side effects**: Antibiotics can cause stomach upset, allergic reactions, or other adverse effects unrelated to the cold.\n- **Disruption of healthy gut flora**: Antibiotics can disturb your microbiome, which may lead to other health issues.\n\nIf you have a suspected bacterial infection (like a strep throat, confirmed by a test), follow your doctor's guidance. For a cold or flu, focus on rest, fluids, and supportive care — which typically improve symptoms within a few days.",
+      "word_count": 138,
+      "tokens_generated": 183,
+      "time_seconds": 5.2,
+      "signal_score": 0.75,
+      "signals_found": [
+        "virus",
+        "bacteria",
+        "antibiotic"
+      ],
+      "signals_expected": [
+        "virus",
+        "bacteria",
+        "antibiotic",
+        "won't help"
+      ],
+      "has_think_tag": false
+    },
+    {
+      "id": "GK02",
+      "name": "Reasoning preserved",
+      "category": "General Knowledge",
+      "knowledge_sub": null,
+      "what_it_tests": "Did fine-tuning damage basic reasoning?",
+      "prompt": "A bat and ball cost $1.10 together. The bat costs $1 more than the ball. How much does the ball cost?",
+      "system_used": "You are a helpful assistant. Think carefully before respondi...",
+      "response": "This is a classic riddle that relies on the order of operations. The most common mistake is to subtract the total ($1.10) from the bat's price ($1) to get the ball's price ($0.10).\n\nLet's solve it logically:\nLet $b$ be the cost of the ball.\nThen the cost of the bat is $b + 1$.\n\nThe equation is:\n$$b + (b + 1) = 1.10$$\n$$2b + 1 = 1.10$$\n$$2b = 0.10$$\n$$b = 0.05$$\n\nSo, the ball costs **5 cents**. The bat costs $1.05, and together they cost $1.10.",
+      "word_count": 91,
+      "tokens_generated": 169,
+      "time_seconds": 4.8,
+      "signal_score": 0.67,
+      "signals_found": [
+        "5 cent",
+        "0.05"
+      ],
+      "signals_expected": [
+        "5 cent",
+        "$0.05",
+        "0.05"
+      ],
+      "has_think_tag": false
+    }
+  ],
+  "summary": {
+    "avg_signal_score": 0.2,
+    "avg_word_count": 249,
+    "total_time_seconds": 449.2,
+    "think_tag_rate": 0.0,
+    "category_scores": {
+      "Premise Challenge": 0.21,
+      "Data Source Skepticism": 0.11,
+      "Multi-Signal Synthesis": 0.15,
+      "Live Signal Interpretation": 0.06,
+      "Location Feasibility": 0.15,
+      "Stakeholder Management": 0.27,
+      "Always-On Intelligence": 0.34,
+      "Job Description Analysis": 0.14,
+      "Forward-Looking": 0.09,
+      "Commercial Translation": 0.1,
+      "Diagnostic Questioning": 0.23,
+      "Epistemic Calibration": 0.21,
+      "Brevity": 0.4,
+      "Switching": 0.25,
+      "General Knowledge": 0.71
+    },
+    "knowledge_subcategory_scores": {
+      "D": 0.14,
+      "A": 0.19,
+      "E": 0.14,
+      "C": 0.15,
+      "F": 0.22,
+      "G": 0.29,
+      "B": 0.14
+    }
+  }
+}
