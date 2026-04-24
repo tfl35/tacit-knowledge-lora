@@ -105,9 +105,10 @@ Trained adapters in GGUF format are available on HuggingFace:
 | TI-Analyst-9B | 350 | Full power: highest reasoning quality, requires GPU | [HuggingFace](https://huggingface.co/tfl35/ti-analyst-9b) |
 | **TI-Analyst-4B-150** | 150 | Recommended: sweet spot dataset size, Level 3 TI reasoning on 8 GB RAM | [HuggingFace](https://huggingface.co/tfl35/ti-analyst-4b-150) |
 
-⚠️ Known Behavior: Multi-turn Hallucination
-
-Users may occasionally see the model generate text beyond the expected answer, such as predicting a follow-up user question (e.g., <|im_start|>user...). Why this happens: The model was trained on conversational datasets and sometimes predicts the start of a new dialogue exchange instead of stopping at the end-of-turn token. If you are using a library like transformers or vLLM, we recommend adding <|im_start|> and <|endoftext|> to your stop sequences to ensure the generation cuts off immediately after the answer.
+🛑 Disclaimer & Implementation Details
+> Status: Academic prototype; not production-tested. GGUF versions may exhibit unexpected variance.
+> Issue: The model may occasionally predict the start of a new user turn (e.g., <|im_start|>user) instead of stopping.
+> Solution: We strongly recommend explicitly defining stop sequences in your inference pipeline. Use <|im_start|> and <|endoftext|> to prevent the model from generating beyond the current turn. These are included in the repository's configuration files by default.
 
 ## Repository Structure
 
