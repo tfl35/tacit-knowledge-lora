@@ -108,7 +108,7 @@ Trained adapters in GGUF format are available on HuggingFace:
 🛑 Disclaimer & Implementation Details
 > Status: Academic prototype; not production-tested. GGUF versions may exhibit unexpected variance.
 > Issue: The model may occasionally predict the start of a new user turn (e.g., <|im_start|>user) instead of stopping.
-> Solution: We strongly recommend explicitly defining stop sequences in your inference pipeline. Use <|im_start|> and <|endoftext|> to prevent the model from generating beyond the current turn. These are included in the repository's configuration files by default.
+> Solution: Strongly recommend explicitly defining stop sequences in your inference pipeline. Use <|im_start|> and <|endoftext|> to prevent the model from generating beyond the current turn. These are included in the repository's configuration files by default.
 
 ## Repository Structure
 
